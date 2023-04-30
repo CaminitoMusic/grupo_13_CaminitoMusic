@@ -6,8 +6,8 @@ body{
     width: 100%;
 }
 
-.nombre{
-    text: size adjust 100px;
+#nombre{
+    font-size: 8vw;
     text-align: center;
     
 }
