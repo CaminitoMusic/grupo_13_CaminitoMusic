@@ -1,0 +1,30 @@
+body{
+    background: #400080; 
+}
+
+#banner{
+    margin-top: auto;
+    width: 100%;
+}
+
+#nombre{
+    margin-top: 5%;
+    color:#ffffff;
+    font-size: 500%;    
+    text-align: center;
+}
+
+#mision{
+    margin-top: 2%;
+    text-align: center;
+    color: #ffffff
+}
+
+#entrar{
+    text-align: center;
+    text: size adjust 500px;
+    margin-bottom: auto;
+}
+    
+
+
