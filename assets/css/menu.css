@@ -1,4 +1,39 @@
 body {
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	background-color:rgb(152, 17, 179);
+}
+
+header > h1#titulo-sitio {
+	text-transform: uppercase;
+	font-size: 1.3em;
+	text-shadow: 2px 2px rgba(37, 37, 37, 0.89),3px 3px 5px rgb(45, 134, 235), 2px 2px 3px rgb(41, 27, 235);
+	color: #fff;
+	margin-top: 0; /*elimina el margen de arriba*/
+}
+
+header > h1 > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+a {
+	color: rgb(52, 214, 201);
+	text-decoration: none;
+}
+
+footer {
+	background-color: rgb(152, 17, 179);
+	color: #fff;
+}
+
+
+/*
+body {
 	background-color: black;
 	margin: 0;
 	padding: 0;
@@ -59,9 +94,9 @@ nav ul li a {
 nav ul li a:hover {
 	color: #663399;
 }
-		
+	*/	
 /* Estilos para el menú hamburguesa */
-		
+/*		
 .menu-icon {
 	display: none;
 }
@@ -114,3 +149,4 @@ nav ul li a:hover {
 		color:#663399;
 	}
 }
+*/
