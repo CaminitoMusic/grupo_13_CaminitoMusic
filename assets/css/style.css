@@ -16,3 +16,21 @@ body{
 h1{
     color: #ffffff
 }
+
+header {
+    display: flex;
+
+}
+
+.contenedor-header-padre {
+    display: flex;
+    
+}
+.header-hijo1 {
+
+}
+
+form {
+    background-color:rgba(128, 128, 12, 0.5)
+
+}
