@@ -5,11 +5,15 @@ body {
 
 header {
 	background-color:rgb(152, 17, 179);
+	display: flex;
+	place-content: space-between; /*alinea los items horizontalmente */
+	align-items: baseline;
+	padding: 1em;
 }
 
 header > h1#titulo-sitio {
 	text-transform: uppercase;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	text-shadow: 2px 2px rgba(37, 37, 37, 0.89),3px 3px 5px rgb(45, 134, 235), 2px 2px 3px rgb(41, 27, 235);
 	color: #fff;
 	margin-top: 0; /*elimina el margen de arriba*/
@@ -26,9 +30,34 @@ a {
 	text-decoration: none;
 }
 
+header ul, footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	place-content: space-between; /*alinea los items horizontalmente */
+}
+
+header div.Info-artistas {
+	background-color: #400080;
+	height: 2em;
+	width: 6em;
+	font-size: 1.2em;
+	border: 1px solid rgb(52, 214, 201);
+	border-radius: 5px;
+	text-align: center;
+	align-items: center;/*no da bola*/
+
+}
+
 footer {
 	background-color: rgb(152, 17, 179);
 	color: #fff;
+	padding: 1em;
+
+	display: flex;
+	place-content: space-between; /*alinea los items horizontalmente */
 }
 
 
