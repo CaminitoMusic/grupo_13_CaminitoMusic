@@ -1,230 +1,342 @@
+/*fuente google: Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/* Declaracion de las variables para los colores del sitio */
+:root {
+    /*** Colores para el top-menu-header: texto, fondo y links ***/
+    /*** Header top-menu ***/
+
+    --color-fondo-gral: #400080;
+    --fondo-top-header: rgba(131, 16, 125, 1);
+    --texto-top-header: #fff;
+
+    /**** menu princpal ***/
+    --color-fondo-menu: rgba(131, 16, 125, 0.65);
+    --color-02-fondo-menu: rgba(92, 2, 62, 0.5);
+    --color-03-fondo-menu: rgba(11, 4, 70, 0.5);
+
+    --menu-principal-texto: #fff;
+    --menu-principal-over-texto: rgb(8, 171, 247);
+    --menu-principal-over-fondo: rgba(0, 0, 0, 0.3);
+    --sombreado-menu-over: 2px 2px rgb(158, 23, 23);
+
+    /*** Titulo del sitio -> logo ***/
+    --color-titulo-sitio: #fff;
+    --color-titulo-music: rgba(0, 0, 0, 1);
+    --color-02-titulo-music: rgba(80, 8, 196, 0.89);
+
+    --sombreado-titulo-sitio: 2px 2px 2px rgba(54, 56, 59, 0.8), 1px 1px 5px rgba(14, 13, 13, 0.85);
+    --sombreado-02-titulo-sitio: 3px 3px 5px rgba(19, 18, 18, 0.7), 1px 1px 3px rgba(241, 10, 241, 0.8);
+
+    --sombreado-titulo-music: 3px 3px 15px rgba(19, 18, 18, 0.952), 1px 1px 3px rgb(10, 241, 210, .5);
+    /*, 5px 5px 8px rgb(68, 15, 104), 13px 13px 25px rgba(240, 73, 73, 0.89)*/
+    --sombreado-02-titulo-music: 3px 3px 15px rgba(19, 18, 18, .5), 1px 1px 3px rgba(241, 10, 241, 1);
+    --sombreado-03-titulo-music: 3px 3px 15px rgba(19, 18, 18, 0.952), 1px 1px 3px rgb(10, 241, 210);
+
+    /*** Colores Boton Artistas ***/
+    --btn-artistas: rgb(68, 15, 104);
+    --btn-artistas-fondo: #fff;
+    --sombreado-btn-artistas: 3px 3px 10px rgb(68, 15, 104), -3px -3px 15px rgb(68, 15, 104);
+    --btn-over-artistas: #fff;
+    --btn-over-fondo-artistas: rgba(61, 6, 124, 0.911);
+    --sombreado-btn-over-artistas: 3px 3px 10px rgb(201, 144, 238), 5px 5px 8px rgb(77, 61, 87), 13px 13px 25px rgba(240, 73, 73, 0.89);
+    /** Colores menu artistas ***/
+    --color-links-artistas: rgb(245, 138, 17);
+    --sombreado-links-artistas: 2px 2px 3px rgba(46, 6, 6, 0.8);
+
+
+    /*** Valores de las transiciones **/
+    --transicion-top-menu-header: all 0.5s ease;
+
+}
+
 body {
-	padding: 0;
-	margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
 }
 
-header {
-	background-color:rgb(152, 17, 179);
-	display: flex;
-	place-content: space-between; /*alinea los items horizontalmente */
-	align-items: baseline;
-	padding: 1em;
-}
+/*** header ***/
+.top-menu-header {
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    /*Para formatos mas grandes*/
 
-header div.contenedor {
-	place-content:flex-start;
-}
-header div.contenedor nav {
-	width:70%;
-	display:flex;
-	place-content: space-between;
-}
-#menu, #menu-check {
-	display: none;
-}
-
-@media only screen and (max-width: 900px) {
-	header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
-		display: inline;
-	}
-	header div.contenedor nav {
-		width:100%;
-		display: inline;
-	}
-}
-
-@media only screen and (max-width: 700px) {
-	header h1 {
-		margin: 0;
-	}
-	header h1 a {
-		padding: 0;
-	}
-	header div.contenedor {
-		display: flex;
-		place-content:space-between;
-	}
-	/*preguntar por el input check */
-	#menu-check:not(:checked) ~ nav {
-		display: none;
-	}
-	#menu-check:checked ~ nav {
-		display:block;
-	}
-
-}
-
-header > h1#titulo-sitio {
-	text-transform: uppercase;
-	font-size: 1.4em;
-	text-shadow: 2px 2px rgba(37, 37, 37, 0.89),3px 3px 5px rgb(45, 134, 235), 2px 2px 3px rgb(41, 27, 235);
-	color: #fff;
-	margin-top: 0; /*elimina el margen de arriba*/
-}
-
-header > h1 > a {
-	text-decoration: none;
-	color: #fff;
-}
-
-
-a {
-	color: rgb(52, 214, 201);
-	text-decoration: none;
-}
-
-header ul, footer ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-
-	display: flex;
-	place-content: space-between; /*alinea los items horizontalmente */
-}
-
-header div.Info-artistas {
-	display:flex;
-
-	background-color: #400080;
-	height: 1.5em;
-	width: 6em;
-
-	font-size: 1.2em;
-	border: 1px solid rgb(52, 214, 201);
-	border-radius: 5px;
-
-	text-align: center;
-	align-items: center;/*no da bola*/
-
-}
-
-
-
-footer {
-	background-color: rgb(152, 17, 179);
-	color: #fff;
-	padding: 1em;
-
-	display: flex;
-	place-content: space-between; /*alinea los items horizontalmente */
-}
-
-
-/*
-body {
-	background-color: black;
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-    
-}
-		
-h1 {
-    
-
-	color: white;
-	text-align: center;
-	padding: 50px;
-	background-color: purple;
-	margin: 0;
-	text-shadow: 2px 2px #663399;
-}
-
-.titulo-sitio {
+    display: block;
     width: 100%;
+    height: 3em;
+    background: var(--fondo-top-header);
+
+    z-index: 100;
+
+    transition: var(--transicion-top-menu-header);
 }
-		
-header {
+
+.top-menu-header a {
+    text-decoration: none;
+    padding: 1em 0em;
+    align-self: center;
+
+}
+
+
+/*** titulo-logo ***/
+.top-menu-header span#titulo-sitio {
+    margin: auto 0;
+    padding: 0px 0.3em;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    text-shadow: var(--sombreado-titulo-sitio);
+}
+
+.top-menu-header span#titulo-sitio a {
+    color: var(--texto-top-header);
+}
+
+.top-menu-header span#titulo-sitio a span#titulo-music {
+    font-weight: 900;
+    color: var(--color-titulo-music);
+    text-shadow: var(--sombreado-titulo-music);
+    position: relative;
+    left: 1px;
+}
+
+/** oculto el input de los botones **/
+#btn-menu,
+#btn-artistas {
+    display: none;
+}
+
+/* imagen-menu: 3 rayitas*/
+#img-menu {
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: .5em;
+    left: .5em;
+
+    filter: drop-shadow(2px 2px 1px rgb(31, 167, 4));
+}
+
+
+.top-menu-header label#label-menu-principal {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+
+    transition: all 0.35s ease;
+    /*border-right: 1px solid #fff;*/
+}
+
+
+.top-menu-header label#label-menu-principal:hover,
+.top-menu-header label#label-menu-artistas:hover {
+    cursor: pointer;
+}
+
+/******** formato/acciones sobre el menu principal */
+.menu {
+    display: block;
+
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    background: var(--color-fondo-menu);
+    width: 100%;
+    /*margin-left: -100%;*/
+    margin-top: -300%;
+    top: 3em;
+    transition: all 1s ease;
+
+    z-index: -1;
+}
+
+.menu ul#menu-principal {
+    margin: 0;
+    padding: 0;
+    /*align-items: center;*/
+    list-style: none;
+
     display: flex;
-    justify-content:flex-start;
-}
-
-nav {
-	background-color: purple;
-	padding: 10px;
-    <!-- display: flex; -->
-    
-}
-		
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	display: flex;
     flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
-		
-nav ul li {
-	margin: 0 10px;
-	font-size: 18px;
-	font-weight: bold;
+
+.menu ul#menu-principal li:hover {
+    background: var(--menu-principal-over-fondo);
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
 }
-		
-nav ul li a {
-	color: white;
-	text-decoration: none;
-	transition: color 0.3s ease;
+
+.menu ul#menu-principal li a {
+    display: block;
+    margin: 0;
+    padding: 2em 0.5em;
+    color: var(--menu-principal-texto);
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(37, 37, 37, 0.89);
 }
-		
-nav ul li a:hover {
-	color: #663399;
+
+.menu ul#menu-principal li a:hover {
+    color: var(--menu-principal-over-texto);
+    text-shadow: var(--sombreado-menu-over);
 }
-	*/	
-/* Estilos para el menú hamburguesa */
-/*		
-.menu-icon {
-	display: none;
+
+/***** Boton ARTISTAS: formato y posicionamiento **/
+
+.menu #label-menu-artistas {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.5em 2em;
+    font-size: 1.4em;
+    border: 2px solid rgba(177, 9, 243, 0.85);
+    border-radius: 2em;
+    color: var(--btn-artistas);
+    background-color: var(--texto-top-header);
+    text-shadow: var(--sombreado-btn-artistas);
+
+
 }
-		
-.menu-icon img {
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	padding: 10px;
+
+.menu #label-menu-artistas:hover {
+    color: var(--btn-over-artistas);
+    background-color: var(--btn-over-fondo-artistas);
+    text-shadow: var(--sombreado-btn-over-artistas);
+
+    transition: all 0.5s ease;
 }
-		
-@media screen and (max-width: 768px) {
-	nav ul {
-		display: none;
-	}
-			
-	.menu-icon {
-		display: block;
-	}
-			
-	nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0,0.9);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-			
-	nav.active ul {
-		display: flex;
-		flex-direction: column;
-	}
-			
-	nav ul li {
-		margin: 10px 0;
-	}
-			
-	nav ul li a {
-		color: white;
-		font-size: 24px;
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-			
-	nav ul li a:hover {
-		color:#663399;
-	}
+
+.menu #label-menu-artistas span.titulo-artistas {
+    width: 100%;
+
 }
-*/
+
+.menu #label-menu-artistas span.titulo-artistas:hover {
+
+    font-size: larger;
+    transition: all 0.5s ease;
+
+}
+
+/*********************/
+
+/****** formato/acciones sobre el MENU ARTISTAS */
+.menu ul#menu-artistas {
+    display: none;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+
+    margin-top: -100%;
+    list-style: none;
+}
+
+.menu ul#menu-artistas li {
+
+    padding: 0.5em;
+    border-top: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.menu ul#menu-artistas li:hover {
+    background: var(--menu-principal-over-fondo);
+    text-transform: uppercase;
+}
+
+.menu ul#menu-artistas li a {
+    display: block;
+    /*margin: 0.3em 0;*/
+    padding: 0.5em 0;
+    color: var(--color-links-artistas);
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: var(--sombreado-links-artistas);
+    /*2px 2px 5px rgba(243, 200, 200, 0.89);*/
+}
+
+.menu ul#menu-artistas li a:hover {
+    color: var(--menu-principal-over-texto);
+    text-shadow: var(--sombreado-menu-over);
+}
+
+
+/****************** chequa si estan marcados los inputs-botones ***/
+/*** Boton menu ***/
+#btn-menu:checked~#label-menu-principal {
+    filter: drop-shadow(0px 0px 10px #000);
+    transform: rotate(90deg) translate(-2px);
+    /*filter: drop-shadow(-1px -1px 2px rgb(248, 3, 3));*/
+    transition: all 0.35s ease;
+}
+
+#btn-menu:checked~.menu {
+    margin-top: 0px;
+    box-shadow: -2px 0px 3px #000;
+    /*filter: drop-shadow(-1px 0px 5px);*/
+    transition: all 0.5s ease;
+}
+
+/*** Boton artistas ***/
+#btn-artistas:checked~#menu-artistas {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+
+    transition: all 0.3s ease;
+}
+
+/************************************************* MEDIA QUERIES ****/
+/********************************************************************/
+/* Por defecto esta para Pantallas chicas menores a 575px de ancho*/
+
+/**** Pantallas con ancho minimo de 576px y max de 768px ***/
+@media (min-width:575px) and (max-width:768px){
+
+    /* modifico el header */
+    .top-menu-header {
+        display: flex;
+        flex-direction: row;
+        height: 4em;
+
+        transition: all 0.5s ease;
+    }
+
+    /* modifico el titulo */
+    .top-menu-header span#titulo-sitio,
+    .top-menu-header span#titulo-sitio a {
+        font-size: 1.4em;
+        transition: all 1s ease;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+/**** Pantallas con ancho minimo de 769px y max de 1024px ***/
+@media (min-width:769px) and (max-width:1024px) {}
+
+/* modifico el header */
+.top-menu-header {
+    display: flex;
+    flex-direction: row;
+    height: 4em;
+
+    transition: all 0.5s ease;
+}
+.menu{
+    display: flex;
+}
+
+
+
+/**** Pantallas con ancho minimo de 1025px ***/
+@media (min-width:1025px) {}
