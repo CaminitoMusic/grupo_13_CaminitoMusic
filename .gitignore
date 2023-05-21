@@ -1,2 +1,9 @@
 # ignora el archivo de area de trabajo de VSCode.
 grupo_13_CaminitoMusic.*
+
+# solo sube el .html y .css y/o otro archivo trabajado.
+./assets/banner/
+./assets/icons/
+./wireframes/
+
+
