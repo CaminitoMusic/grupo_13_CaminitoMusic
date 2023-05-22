@@ -14,8 +14,11 @@
     --color-fondo-menu: rgba(131, 16, 125, 0.65);
     --color-02-fondo-menu: rgba(92, 2, 62, 0.5);
     --color-03-fondo-menu: rgba(11, 4, 70, 0.5);
+    --color-04-fondo-menu: rgba(175, 174, 180, 0.5);
+
 
     --menu-principal-texto: #fff;
+    --menu-principal-02-texto:rgba(15, 15, 15, 0.904); 
     --menu-principal-over-texto: rgb(8, 171, 247);
     --menu-principal-over-fondo: rgba(0, 0, 0, 0.3);
     --sombreado-menu-over: 2px 2px rgb(158, 23, 23);
@@ -44,15 +47,18 @@
     --color-links-artistas: rgb(245, 138, 17);
     --sombreado-links-artistas: 2px 2px 3px rgba(46, 6, 6, 0.8);
 
+    --sombreado-otro:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
     /*** Valores de las transiciones **/
     --transicion-top-menu-header: all 0.5s ease;
 
-}
+}  /************************   fin variables ******************/
+
 
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /*** header ***/
@@ -62,21 +68,13 @@ body {
 
     /*display: flex;*/
     /*Para formatos mas grandes*/
-
     display: block;
     width: 100%;
     height: 3em;
     background: var(--fondo-top-header);
-
     z-index: 100;
 
     transition: var(--transicion-top-menu-header);
-}
-
-.top-menu-header #menu-principal a {
-    text-decoration: none;
-    /*align-self: center;*/
-    
 }
 
 
@@ -91,6 +89,7 @@ body {
 
 .top-menu-header span#titulo-sitio a {
     color: var(--texto-top-header);
+    text-decoration: none;
 }
 
 .top-menu-header span#titulo-sitio a span#titulo-music {
@@ -99,6 +98,11 @@ body {
     text-shadow: var(--sombreado-titulo-music);
     position: relative;
     left: 1px;
+}
+
+.top-menu-header span#titulo-sitio:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
 }
 
 /** oculto el input de los botones **/
@@ -119,8 +123,6 @@ body {
 
     filter: drop-shadow(2px 2px 1px rgb(31, 167, 4));
 }
-
-
 .top-menu-header label#label-menu-principal {
     width: 30px;
     height: 30px;
@@ -134,6 +136,7 @@ body {
 .top-menu-header label#label-menu-principal:hover,
 .top-menu-header label#label-menu-artistas:hover {
     cursor: pointer;
+    filter: drop-shadow(0px 1px 2px rgb(4, 227, 243));
 }
 
 /******** formato/acciones sobre el menu principal */
@@ -144,14 +147,14 @@ body {
     position: absolute;
     align-items: center;
     text-align: center;
-    background: var(--color-fondo-menu);
+    background: var(--color-04-fondo-menu);
     width: 100%;
     /*margin-left: -100%;*/
     margin-top: -300%;
     top: 3em;
-    transition: all 1s ease;
-
     z-index: -1;
+
+    transition: all 1s ease;
 }
 
 .menu ul#menu-principal {
@@ -159,17 +162,23 @@ body {
     padding: 0;
     /*align-items: center;*/
     list-style: none;
-
+    
     display: flex;
     flex-direction: column;
 }
+.menu ul#menu-principal li{
+    width: 320px;
+    background-color: none;
 
+    transition: all .7s ease;
+}
 .menu ul#menu-principal li:hover {
     background: var(--menu-principal-over-fondo);
     font-weight: 900;
+    transform: scale(1.1);
     text-transform: uppercase;
 
-    transition: all 0.5s ease;
+    transition: all .7s ease;
 }
 
 .menu ul#menu-principal li a {
@@ -179,8 +188,9 @@ body {
     padding: 2em 0.5em;
 
     font-size: 1em;
-    color: var(--menu-principal-texto);
-    text-shadow: 2px 2px 5px rgba(37, 37, 37, 0.89);
+    color: var(--menu-principal-02-texto);
+    /*text-shadow: 2px 2px 5px rgba(37, 37, 37, 0.89);    */
+    text-shadow: var(--sombreado-btn-artistas);
 }
 
 .menu ul#menu-principal li a:hover {
@@ -193,7 +203,7 @@ body {
     display: block;
     position: relative;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     padding: 0.5em 2em;
     font-size: 1.4em;
     border: 2px solid rgba(177, 9, 243, 0.85);
@@ -202,23 +212,23 @@ body {
     background-color: var(--texto-top-header);
     text-shadow: var(--sombreado-btn-artistas);
 
-
+    transition: all 1s ease;
 }
-
 .menu #label-menu-artistas:hover {
     color: var(--btn-over-artistas);
     background-color: var(--btn-over-fondo-artistas);
     text-shadow: var(--sombreado-btn-over-artistas);
 
+    transition: all 1s ease;
+}
+.menu #label-menu-artistas span.titulo-artistas {
+    padding: 0 0.2em;
+    width: 100%;
     transition: all 0.5s ease;
 }
 
-.menu #label-menu-artistas span.titulo-artistas {
-    width: 100%;
-}
-
 .menu #label-menu-artistas span.titulo-artistas:hover {
-    font-size: larger;
+    font-size: x-large;
     transition: all 0.5s ease;
 }
 
@@ -250,7 +260,7 @@ body {
     display: block;
     /*margin: 0.3em 0;*/
     padding: 0.5em 0;
-    color: var(--color-links-artistas);
+    color: var(--btn-over-fondo-artistas);
     font-size: 1em;
     text-decoration: none;
     text-shadow: var(--sombreado-links-artistas);
@@ -267,15 +277,15 @@ body {
 /*** Boton menu ***/
 #btn-menu:checked~#label-menu-principal {
     filter: drop-shadow(0px 0px 10px #000);
-    transform: rotate(90deg) translate(-2px);
-    /*filter: drop-shadow(-1px -1px 2px rgb(248, 3, 3));*/
+    transform: rotate(90deg);
+    
     transition: all 0.35s ease;
 }
 
 #btn-menu:checked~.menu {
     margin-top: 0px;
     box-shadow: -2px 0px 3px #000;
-    /*filter: drop-shadow(-1px 0px 5px);*/
+    
     transition: all 0.5s ease;
 }
 
@@ -284,36 +294,65 @@ body {
     display: block;
     position: relative;
     margin: 0 auto;
-
     transition: all 0.3s ease;
+}
+#btn-artistas:checked~#label-menu-artistas {
+    color: var(--btn-over-artistas);
+    background-color: var(--btn-over-fondo-artistas);
+    text-shadow: var(--sombreado-btn-over-artistas);
+
+    transition: all 1s ease;
 }
 
 /************************************************* MEDIA QUERIES ****/
 /********************************************************************/
 /* Por defecto esta para Pantallas chicas menores a 575px de ancho*/
 
-@media (max-width:575px) {}
+@media (max-width:576px) {
+
+}
 
 /**** Pantallas con ancho minimo de 576px y max de 768px ***/
-@media (min-width:576px) and (max-width:768px) {
+@media (min-width:576px)/* and (max-width:768px)*/ {
 
+    .top-menu-header{
+        height: 3.2em;
+        
+        /*probando */
+        display: flex;
+        flex-direction: row;
+        /*   ***   */
+    }
      /* modifico el titulo */
     .top-menu-header span#titulo-sitio,
     .top-menu-header span#titulo-sitio a {
-        font-size: 1.4em;
+        font-size: 1.3em;
+        
         transition: all 1s ease;
     }
 
- /*   .menu {
-        display: flex;
-        flex-direction: column;
-    }*/
+    .top-menu-header label#label-menu-principal {
+            /*translate: 5px -5px;*/
 
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            
+        
+            transition: all 0.35s ease;
+    }
+
+    .top-menu-header label#label-menu-principal img#img-menu{
+        top: 2px;
+        left:0px;
+    }
+    
 }
 
 
 /**** Pantallas con ancho minimo de 769px y max de 1024px ***/
-@media (min-width:769px)/*and (max-width:1024px)*/   {
+@media only screen and (min-width: 768px) {/*
+@media (min-width:769px)/*and (max-width:1024px)   {*/
     .top-menu-header {
         display: flex;
         flex-direction: row;
