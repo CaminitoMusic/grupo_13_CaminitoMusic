@@ -73,11 +73,10 @@ body {
     transition: var(--transicion-top-menu-header);
 }
 
-.top-menu-header a {
+.top-menu-header #menu-principal a {
     text-decoration: none;
-    padding: 1em 0em;
-    align-self: center;
-
+    /*align-self: center;*/
+    
 }
 
 
