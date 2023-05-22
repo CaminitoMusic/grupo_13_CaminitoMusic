@@ -260,7 +260,7 @@ body {
     display: block;
     /*margin: 0.3em 0;*/
     padding: 0.5em 0;
-    color: var(--color-links-artistas);
+    color: var(--btn-over-fondo-artistas);
     font-size: 1em;
     text-decoration: none;
     text-shadow: var(--sombreado-links-artistas);
@@ -277,15 +277,15 @@ body {
 /*** Boton menu ***/
 #btn-menu:checked~#label-menu-principal {
     filter: drop-shadow(0px 0px 10px #000);
-    transform: rotate(90deg) translate(-2px);
-    /*filter: drop-shadow(-1px -1px 2px rgb(248, 3, 3));*/
+    transform: rotate(90deg);
+    
     transition: all 0.35s ease;
 }
 
 #btn-menu:checked~.menu {
     margin-top: 0px;
     box-shadow: -2px 0px 3px #000;
-    /*filter: drop-shadow(-1px 0px 5px);*/
+    
     transition: all 0.5s ease;
 }
 
@@ -294,8 +294,14 @@ body {
     display: block;
     position: relative;
     margin: 0 auto;
-
     transition: all 0.3s ease;
+}
+#btn-artistas:checked~#label-menu-artistas {
+    color: var(--btn-over-artistas);
+    background-color: var(--btn-over-fondo-artistas);
+    text-shadow: var(--sombreado-btn-over-artistas);
+
+    transition: all 1s ease;
 }
 
 /************************************************* MEDIA QUERIES ****/
@@ -311,19 +317,36 @@ body {
 
     .top-menu-header{
         height: 3.2em;
+        
+        /*probando */
+        display: flex;
+        flex-direction: row;
+        /*   ***   */
     }
      /* modifico el titulo */
     .top-menu-header span#titulo-sitio,
     .top-menu-header span#titulo-sitio a {
-        font-size: 1.4em;
+        font-size: 1.3em;
+        
         transition: all 1s ease;
     }
 
- /*   .menu {
-        display: flex;
-        flex-direction: column;
-    }*/
+    .top-menu-header label#label-menu-principal {
+            /*translate: 5px -5px;*/
 
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            
+        
+            transition: all 0.35s ease;
+    }
+
+    .top-menu-header label#label-menu-principal img#img-menu{
+        top: 2px;
+        left:0px;
+    }
+    
 }
 
 
