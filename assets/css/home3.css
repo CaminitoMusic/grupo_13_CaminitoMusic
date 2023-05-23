@@ -1,12 +1,23 @@
 /*fuente google: Ubuntu */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
+/*** variables ***/
+:root{
+    --color-fondo-gral: #400080;
+    --fondo-top-header: rgba(131, 16, 125, 1);
+    --texto-top-footer: #fff; 
+    --fondo-01-footer: rgba(131, 16, 125, 1);
+    --sombreado-01: 1px 1px 3px rgba(13, 13, 14, 0.8);
+    --sombreado-01-titulo-sitio: 5px 5px 10px black;
+
+    --sombreado-texto-entrar: 1px 1px 5px rgba(80, 2, 90, 0.8);
+}
 
 body#body-home {
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
-    background: #400080; 
+    background: var(--color-fondo-gral); 
 }
 
 header.header-home {
@@ -15,33 +26,34 @@ header.header-home {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    /*background: rgba(131, 16, 125, 1);*/
+    
+    
 }
-
 .header-home img#banner{
     width: 100%;
     height: 100%;
+    
+    transition: all 2s ease;
 }
-/*
-#nombre{
-    margin-top: 5%;
-    color:#ffffff;
-    font-size: 800%;  
-    font-family: 'Ubuntu', sans-serif;  text-align: center;
-    text-shadow: 3px 3px 3px #000000;
-}*/
+.header-home img#banner:hover{
+    cursor: pointer;
+    /*transform: scale(1.05);*/
+    filter: blur(0.5em);
+    
+    transition: all 2s ease;
+}
+
 
 /*** titulo-logo ***/
 .header-home span#titulo-sitio {
     position:absolute;
-    top: 3rem;
+    top: 5rem;
     text-align: center;
     width: 100%;
         
     text-transform: uppercase;
     font-size: 3em;
-    color:#fff;
+    color:var(--texto-top-footer);
     text-shadow: 2px 2px 15px rgba(29, 30, 31, 0.9), 1px 1px 5px rgba(14, 13, 13, 0.85), 1px 1px 7px rgb(10, 241, 210, .8);/*var(--sombreado-titulo-sitio);*/
 
     transition: all 2s ease;
@@ -61,10 +73,12 @@ header.header-home {
 .header-home span#titulo-sitio:hover {
     transform: scale(1.1);
     font-weight: bold;  
-
-    text-shadow: 5px 5px 15px black;
+    text-shadow: var(--sombreado-01-titulo-sitio);
 
     transition: all 2s ease;
+}
+.header-home span#titulo-sitio span#titulo-music:hover{
+    text-shadow: var(--sombreado-01-titulo-music);
 }
 main#main-home {
     width: 80%;
@@ -93,15 +107,15 @@ main#main-home a#entrar:link, main#main-home a#entrar:visited{
     display: block;
     padding: 0.3em 1.4em;
     text-align: center;
-    margin: 0 auto;
+    margin: 1.5em auto;
     font-size: 2em;
     color: #000000;
     background-color: #fff;
     text-decoration: none;  
     width: 70%;    
     border-radius: 2em;   
-    
-    text-shadow: 1px 1px 5px rgba(80, 2, 90, 0.8);
+    text-shadow: var(--sombreado-texto-entrar);
+
     transition: 2s all;
 }
 
@@ -109,19 +123,21 @@ main#main-home a#entrar:hover{
     transform: scale(1.2);
     background-color: #000000;/*rgba(189, 7, 245, 0.9);*/
     font-weight: bold;  
-    color: #fff;
+    color: var(--texto-top-footer);
     transition: all 2s ease;
 
 }
 
-
-
-
-    
 footer#footer-home{
+    width: 100%;
+    height: 5em;
+    background: var(--fondo-01-footer);
     text-align: center;
-    color: #BBBBBB;
-    font-size: 15px;
-    margin: 20px;
-    display: block;
+    font-size: 1.3em;
+    padding: 0.5em 0;
+}
+footer#footer-home p{
+    padding: 1em 0;
+    color: var(--texto-top-footer);
+    text-shadow: var(--sombreado-01);
 }
