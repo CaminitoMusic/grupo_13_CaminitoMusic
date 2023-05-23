@@ -62,17 +62,13 @@ body {
 }
 
 /*** header ***/
-.top-menu-header {
-    /*margin: 0;
-    padding: 0;*/
-
-    /*display: flex;*/
-    /*Para formatos mas grandes*/
-    display: block;
+header.top-menu-header {
+    display: flex; /*block;*/
     width: 100%;
     height: 3em;
     background: var(--fondo-top-header);
     z-index: 100;
+    align-items: center;
 
     transition: var(--transicion-top-menu-header);
 }
@@ -83,15 +79,15 @@ body {
     margin: auto 0;
     padding: 0px 0.3em;
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1.5em;
     text-shadow: var(--sombreado-titulo-sitio);
-}
 
+    transition: all 1s ease;
+}
 .top-menu-header span#titulo-sitio a {
     color: var(--texto-top-header);
     text-decoration: none;
 }
-
 .top-menu-header span#titulo-sitio a span#titulo-music {
     font-weight: 900;
     color: var(--color-titulo-music);
@@ -99,7 +95,6 @@ body {
     position: relative;
     left: 1px;
 }
-
 .top-menu-header span#titulo-sitio:hover {
     transform: scale(1.1);
     transition: all 1s ease;
@@ -112,26 +107,31 @@ body {
 }
 
 /* imagen-menu: 3 rayitas*/
-#img-menu {
-    margin: 0;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: .5em;
-    left: .5em;
-
-    filter: drop-shadow(2px 2px 1px rgb(31, 167, 4));
-}
 .top-menu-header label#label-menu-principal {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    /*cargo la imagen*/
+    background-image: url(../icons/menu-regular-24.png);
+    background-repeat:no-repeat;
+    background-size: contain;
 
     transition: all 0.35s ease;
     /*border-right: 1px s #fff;*/
 }
+.top-menu-header label#label-menu-principal img#img-menu {
+    box-sizing:border-box;
+    display:block;
+    width:20px;        /*Ancho de la imagen nueva.*/
+    height:20px;       /*Ancho de la imagen nueva.*/
+    padding-left:20px; /*Padding igual al ancho de la imagen nueva, sino, aparece la forma de una imagen*/
+    /*background: url(../icons/bx-menu.png);*/
+    overflow:hidden;
+    filter: drop-shadow(2px 2px 1px rgb(31, 167, 4));
 
+    transition: all 0.35s ease;
+}
 
 .top-menu-header label#label-menu-principal:hover,
 .top-menu-header label#label-menu-artistas:hover {
@@ -281,12 +281,19 @@ body {
     
     transition: all 0.35s ease;
 }
-
 #btn-menu:checked~.menu {
     margin-top: 0px;
     box-shadow: -2px 0px 3px #000;
     
     transition: all 0.5s ease;
+}
+#btn-menu:checked~label#label-menu-principal{
+    background:url(../icons/bx-menu.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    
+    transition: all 0.3s ease;
+
 }
 
 /*** Boton artistas ***/
@@ -316,37 +323,34 @@ body {
 @media (min-width:576px)/* and (max-width:768px)*/ {
 
     .top-menu-header{
-        height: 3.2em;
-        
+        height: 3.5em;
+        align-items: center;
+
         /*probando */
-        display: flex;
-        flex-direction: row;
+        /*display: flex;
+        flex-direction: row;*/
         /*   ***   */
     }
+
      /* modifico el titulo */
-    .top-menu-header span#titulo-sitio,
+    /*.top-menu-header span#titulo-sitio,
     .top-menu-header span#titulo-sitio a {
-        font-size: 1.3em;
+        font-size: 1.4em;
         
+        transition: all 1s ease;
+    }*/
+ 
+
+    .top-menu-header span#titulo-sitio {
+        /*margin: auto 0;*/
+        /*padding: 0px 0.3em;*/
+        /*text-transform: uppercase;*/
+        font-size: 1.6em;
+        text-shadow: var(--sombreado-titulo-sitio);
+    
         transition: all 1s ease;
     }
 
-    .top-menu-header label#label-menu-principal {
-            /*translate: 5px -5px;*/
-
-            width: 30px;
-            height: 30px;
-            padding: 10px;
-            
-        
-            transition: all 0.35s ease;
-    }
-
-    .top-menu-header label#label-menu-principal img#img-menu{
-        top: 2px;
-        left:0px;
-    }
-    
 }
 
 
