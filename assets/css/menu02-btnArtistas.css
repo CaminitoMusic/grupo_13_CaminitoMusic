@@ -65,7 +65,6 @@ a{
 }
 body {
     font-family: 'Ubuntu', sans-serif;
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -178,7 +177,6 @@ header.header-menu {
     text-transform: uppercase;
     transition: all .5s ease;
 }
-
 .menu ul#menu-principal li a {
     display: block;
     padding: 2em 0em;
@@ -187,7 +185,6 @@ header.header-menu {
     /*text-shadow: var(--sombreado-btn-artistas);*/
     /*text-shadow: var(--sombreado-titulo-music);*/
 }
-
 .menu ul#menu-principal li a:hover {
     color: var(--menu-principal-over-texto);
     text-shadow: var(--sombreado-menu-over);
@@ -316,12 +313,12 @@ header.header-menu {
 /**** Pantallas con ancho minimo de 576px y max de 768px ***/
 @media (min-width:576px)/* and (max-width:768px)*/ {
 
-    .header-menu{
+    header.header-menu{
         height: 3.5em;
         align-items: center;
     }
 
-    .header-menu span#titulo-sitio {
+    header.header-menu span#titulo-sitio {
         /*margin: auto 0;*/
         /*padding: 0px 0.3em;*/
         /*text-transform: uppercase;*/
@@ -335,97 +332,99 @@ header.header-menu {
 /**** Pantallas con ancho minimo de 769px y max de 1024px ***/
 @media (min-width: 768px) {
 
-    .header-menu {
-        height: 4em;
-        align-items: center;
+    header.header-menu {
+        height: 5em;
+        align-items:center;
+        padding-top: 0;
     }
     .header-menu label#label-menu-principal{
         display: none;
     }
-    .menu {
+    .header-menu nav.menu {
         display: flex;
         flex-direction: row;
         position:sticky;
-        justify-content: space-between;
         text-align: center;        
         margin: 0;
-        padding: 0;
+        padding: 0 0.5em;
+        align-items:center;
         background: none;
-        height: 4em;
+        height: 5em;
         transition: all 0.5s ease;
     }
 
-    .menu ul#menu-principal {
+    nav.menu ul#menu-principal {
         display: flex;
         flex-direction: row;
         margin: 0;
         padding: 0;
-        
-    }
 
+        place-content: space-between;
+    }
     .menu ul#menu-principal li{
         /*display: inline;*/
         background-color: none;
         pointer-events:visible;
-        /*padding: 0 0.7em;*/
+        padding: 1em 0;
         transition: all .5s ease;
     }
     .menu ul#menu-principal li:hover {
         background: var(--menu-principal-over-fondo);
         font-weight:400;
         transform:none;
-        /*text-transform:uppercase;*/
-        
         transition: all .5s ease;
     }
-    
     .menu ul#menu-principal li a {
         display:inline-block;
         align-items: center;
-        
-        padding: 0.4em 0.5em;
+        padding: 0.5em 0.5em;
         font-size: 1.2em;
         color: var(--color-titulo-music);
     }
-    
     .menu ul#menu-principal li a:hover {
         color: var(--menu-principal-over-texto);
         text-shadow: var(--sombreado-menu-over);
     }
 
-
-
-    
-
-
+/***** Menu Artistas ***/
     .menu div.artistas{
-        display: inline;
-        position: relative;
+        display:inline;
+        position:relative;
         top: 0;
-        /*width: 100%;*/
+        left:0em;
+        
+        min-width: 150px;/*par que el boton no se agrande mucho */
+        max-width: 300px;/*par que el boton no se agrande mucho */
+        align-self: center;
     }
     .menu #label-menu-artistas {
         display: block;
         position: relative;
-        margin: 0 auto;
-        width: 50%;
         padding: 0.3em 1em;
         font-size: 1.2em;
-        /*border: 2px solid rgba(177, 9, 243, 0.85);*/
-       /* border-radius: 2em;*/
-        /*color: var(--btn-artistas);*/
-        /*background-color: var(--texto-top-header);*/
-        /*text-shadow: var(--sombreado-btn-artistas);*/
-    
         transition: all 1s ease;
     }
+    #btn-artistas:checked~#menu-artistas {
+        display: block;
+        position: relative;
+        /*margin: 0 auto;*/
+
+        top: 0em;
+        left: 0;
+        margin-top: 17em;
+
+        z-index: 15;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    /*
     .menu #label-menu-artistas:hover {
         color: var(--btn-over-artistas);
         background-color: var(--btn-over-fondo-artistas);
         text-shadow: var(--sombreado-btn-over-artistas);
-    
         transition: all 0.5s ease;
     }
+    
     .menu #label-menu-artistas span.titulo-artistas {
         padding: 0 0.2em;
         width: 100%;
@@ -434,7 +433,8 @@ header.header-menu {
     .menu #label-menu-artistas span.titulo-artistas:hover {
         
         transition: all 0.5s ease;
-    }
+    }*/
+
 }
     
  /*   
