@@ -58,6 +58,10 @@
 
 }  /************************   fin variables ******************/
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -68,17 +72,21 @@ body {
 /*** header ***/
 header.top-menu-header {
     display:flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items:normal;
     position: fixed;
     width: 100%;
     height: 3em;
-    margin: 0;
+    margin:0;
     padding: 0;
     background: var(--fondo-top-header);
     z-index: 100;
-    
     transition: var(--transicion-top-menu-header);
+}
+.main{
+    width:100%;
+    display:block;
+    
 }
 
 
@@ -86,8 +94,11 @@ header.top-menu-header {
 .top-menu-header span#titulo-sitio {
     font-size: 1.3em;
     text-transform: uppercase;
-    margin-top: 0.32em;
-    margin-left: 0.5em;
+    margin: auto 0;
+    padding-left: 0.5em;
+    /*margin-top: 0.32em;
+    margin-left: 0.5em;*/
+
     text-shadow: var(--sombreado-titulo-sitio);
     transition: all 1s ease;
 }
@@ -117,11 +128,14 @@ header.top-menu-header {
 .top-menu-header label#label-menu-principal {
     display: block;
     position: relative;
-    margin-top: -0.3em;
+    margin: 0;
+    padding: 3px;
+    margin-top: 0.3em;
     margin-left:0.5em;
+
     width: 30px;
     height: 30px;
-    padding: 5px;
+    
     /*cargo la imagen*/
     background-image: url(../icons/menu-regular-24.png);
     background-repeat:no-repeat;
@@ -136,7 +150,7 @@ header.top-menu-header {
     height:20px;       
     padding-left:20px; /*Padding igual al ancho de la imagen nueva, sino, aparece la forma de una imagen*/
     overflow:hidden;
-    transition: all 0.35s ease;
+   /* transition: all 0.35s ease;*/
 }
 .top-menu-header label#label-menu-principal:hover,
 .top-menu-header label#label-menu-artistas:hover {
@@ -155,10 +169,12 @@ header.top-menu-header {
     text-align: center;
     background: var(--color-04-fondo-menu);
     width: 100%;
-        margin-left: -100%;
-    /*margin-top: -300%;*/
+    margin-left: -100%;
     top: 3em;
-    z-index: -1;
+    z-index: 10;
+    
+    opacity: 1;
+    
     transition: all 1s ease;
 }
 .nav-menu ul#menu-principal {
@@ -200,15 +216,18 @@ header.top-menu-header {
 /******************************** Boton ARTISTAS: formato y posicionamiento **/
 .top-menu-header div.div-artistas{
     display:none;
-    position:relative;
+    position:absolute;
     width: 100%;
     margin: 0 auto;
-    margin-top: 0em; /*21em;*/
+    bottom: 0;
+    /*top: 0;*/ /*se coloca dentro del menu, aunque el efecto es el correcto de presiana*/
+    left: 0;
+
     transition: all 1s ease;
 }
 .div-artistas label#label-menu-artistas {
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     font-size: 1.2em;
     text-align: center;
     border: 2px solid rgba(177, 9, 243, 0.85);
@@ -243,8 +262,7 @@ header.top-menu-header {
     margin: 0 auto;
     padding: 0;
     margin-top: -100em;
-    list-style: none;
-    transition: all 1s ease;
+    transition: all 3s ease-in-out;
 }
 .div-artistas ul#menu-artistas li {
     border-top: 1px solid #fff;
@@ -309,7 +327,7 @@ header.top-menu-header {
     display: block;
     position: relative;
     margin: 0 auto;
-    transition: all 0.3s ease;
+    transition: all 1s ease-in-out;
 }
 #btn-artistas:checked~#label-menu-artistas {
     color: var(--btn-over-artistas);
@@ -322,68 +340,41 @@ header.top-menu-header {
 /********************************************************************/
 /* Por defecto esta para Pantallas chicas menores a 575px de ancho*/
 
-@media (max-width:576px) {
-
-}
-
 /**** Pantallas con ancho minimo de 576px y max de 768px ***/
-@media only screen and (min-width:576px)/* and (max-width:768px)*/ {
+@media only screen and (min-width:576px) {
 
     .top-menu-header{
         display: flex;
         flex-direction: column;
-
         height: 3.5em;
-        /*align-items: center;*/
         transition: var(--transicion-top-menu-header);
-
-/*
-        display:flex;
-        
-        align-items: flex-start;
-        position: fixed;
-        width: 100%;
-        height: 3em;
-        background: var(--fondo-top-header);
-        z-index: 100;
-        
-        transition: var(--transicion-top-menu-header);*/
     }
-
-
-
-        
-    
-    
-   
-    
-    
-}
+/*
     .top-menu-header span#titulo-sitio {
         /*margin: auto 0;*/
         /*padding: 0px 0.3em;*/
         /*text-transform: uppercase;*/
-        font-size: 1.6em;
+/*        font-size: 1.6em;
         text-shadow: var(--sombreado-titulo-sitio);
     
         transition: all 1s ease;
-    }
+    }*/
     /* imagen-menu: 3 rayitas*/
-    .top-menu-header label#label-menu-principal {
+ /*   .top-menu-header label#label-menu-principal {
         top: -1.5em;
         left: 14em;
         /* * */
-        width: 30px;
+/*        width: 30px;
         height: 30px;
         padding: 5px;
         
         transition: all 0.35s ease;
-    }
+    }*/
 
     /************** prueba del boton artistas en barra nav */
 
     /* aca iria el boton artistas. separarlo del nav */
-    .top-menu-header div.bandas {
+/*    .top-menu-header div.bandas {
         display: inline;
         position: relative;
         width: 50%;
@@ -392,7 +383,7 @@ header.top-menu-header {
         /*left: 16em;*/
         /*right: 1em;*/
 
-    }
+/*    }*/
     /* *** */
 
 
