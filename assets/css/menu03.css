@@ -3,7 +3,7 @@
 
 /* Declaracion de las variables para los colores del sitio */
 :root {
-    /*** Colores para el header-menu: texto, fondo y links ***/
+    /*** Colores para el top-menu-header: texto, fondo y links ***/
     /*** Header top-menu ***/
 
     --color-fondo-gral: #400080;
@@ -11,11 +11,11 @@
     --texto-top-header: #fff;
 
     /**** menu princpal ***/
-    --color-fondo-menu: rgba(175, 174, 180, 0.8);
+    --color-fondo-menu: rgba(131, 16, 125, 0.65);
     --color-02-fondo-menu: rgba(92, 2, 62, 0.5);
     --color-03-fondo-menu: rgba(11, 4, 70, 0.5);
-    --color-04-fondo-menu:rgba(131, 16, 125, 0.65);
-    
+    --color-04-fondo-menu: rgba(175, 174, 180, 0.5);
+
 
     --menu-principal-texto: #fff;
     --menu-principal-02-texto:rgba(15, 15, 15, 0.904); 
@@ -29,7 +29,7 @@
     --color-02-titulo-music: rgba(80, 8, 196, 0.89);
 
     --sombreado-titulo-sitio: 2px 2px 2px rgba(54, 56, 59, 0.8), 1px 1px 5px rgba(14, 13, 13, 0.85);
-    --sombreado-02-titulo-sitio: 3px 3px 5px rgba(19, 18, 18, 0.7), 1px 1px 3px rgba(241, 10, 241, 0.8);
+    --sombreado-02-titulo-sitio: 1px 1px 3px rgba(241, 10, 241, 0.7), 2px 2px 5px rgba(19, 18, 18, 1), ;
 
     --sombreado-titulo-music: 3px 3px 15px rgba(19, 18, 18, 0.952), 1px 1px 3px rgb(10, 241, 210, .5);
     /*, 5px 5px 8px rgb(68, 15, 104), 13px 13px 25px rgba(240, 73, 73, 0.89)*/
@@ -50,10 +50,18 @@
     --sombreado-otro:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
     /*** Valores de las transiciones **/
-    --transicion-header-menu: all 0.5s ease;
+    --transicion-top-menu-header: all 0.5s ease;
+    --filtro-img-menu:drop-shadow(2px 2px 1px rgb(18, 134, 7));
+    --filtro-labels:drop-shadow(0px 1px 2px rgb(4, 227, 243));
+
+    --transladoY-div-artistas:20.4em;
 
 }  /************************   fin variables ******************/
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -62,40 +70,50 @@ body {
 }
 
 /*** header ***/
-header.header-menu {
-    display: flex; /*block;*/
+header.top-menu-header {
+    display:flex;
+    flex-direction: row;
+    align-items:normal;
+    position: fixed;
     width: 100%;
     height: 3em;
+    margin:0;
+    padding: 0;
     background: var(--fondo-top-header);
     z-index: 100;
-    align-items: center;
-
-    transition: var(--transicion-header-menu);
+    transition: var(--transicion-top-menu-header);
+}
+.main{
+    width:100%;
+    display:block;
+    
 }
 
 
 /*** titulo-logo ***/
-.header-menu span#titulo-sitio {
-    margin: auto 0;
-    padding: 0px 0.3em;
+.top-menu-header span#titulo-sitio {
+    font-size: 1.3em;
     text-transform: uppercase;
-    font-size: 1.5em;
-    text-shadow: var(--sombreado-titulo-sitio);
+    margin: auto 0;
+    padding-left: 0.5em;
+    /*margin-top: 0.32em;
+    margin-left: 0.5em;*/
 
+    text-shadow: var(--sombreado-titulo-sitio);
     transition: all 1s ease;
 }
-.header-menu span#titulo-sitio a {
+.top-menu-header span#titulo-sitio a {
     color: var(--texto-top-header);
     text-decoration: none;
 }
-.header-menu span#titulo-sitio a span#titulo-music {
+.top-menu-header span#titulo-sitio a span#titulo-music {
     font-weight: 900;
     color: var(--color-titulo-music);
     text-shadow: var(--sombreado-titulo-music);
     position: relative;
     left: 1px;
 }
-.header-menu span#titulo-sitio:hover {
+.top-menu-header span#titulo-sitio:hover {
     transform: scale(1.1);
     transition: all 1s ease;
 }
@@ -107,207 +125,214 @@ header.header-menu {
 }
 
 /* imagen-menu: 3 rayitas*/
-.header-menu label#label-menu-principal {
+.top-menu-header label#label-menu-principal {
     display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
+    position: relative;
+    margin: 0;
+    padding: 3px;
+    margin-top: 0.3em;
+    margin-left:0.5em;
+
+    width: 30px;
+    height: 30px;
+    
     /*cargo la imagen*/
     background-image: url(../icons/menu-regular-24.png);
     background-repeat:no-repeat;
     background-size: contain;
-
+    filter: var(--filtro-img-menu);
     transition: all 0.35s ease;
-    /*border-right: 1px s #fff;*/
 }
-.header-menu label#label-menu-principal img#img-menu {
+.top-menu-header label#label-menu-principal img#img-menu {
     box-sizing:border-box;
     display:block;
-    width:20px;        /*Ancho de la imagen nueva.*/
-    height:20px;       /*Ancho de la imagen nueva.*/
+    width:20px;        
+    height:20px;       
     padding-left:20px; /*Padding igual al ancho de la imagen nueva, sino, aparece la forma de una imagen*/
-    /*background: url(../icons/bx-menu.png);*/
     overflow:hidden;
-    filter: drop-shadow(2px 2px 1px rgb(31, 167, 4));
-
-    transition: all 0.35s ease;
+   /* transition: all 0.35s ease;*/
 }
-
-.header-menu label#label-menu-principal:hover,
-.header-menu label#label-menu-artistas:hover {
+.top-menu-header label#label-menu-principal:hover,
+.top-menu-header label#label-menu-artistas:hover {
     cursor: pointer;
-    filter: drop-shadow(0px 1px 2px rgb(4, 227, 243));
+    filter: var(--filtro-labels);
+    transition: all 0.5s ease-out;
 }
 
 /******** formato/acciones sobre el menu principal */
-.menu {
+.nav-menu {
     display: flex;
     flex-direction: column;
 
     position: absolute;
     align-items: center;
     text-align: center;
-    background: var(--color-fondo-menu);
+    background: var(--color-04-fondo-menu);
     width: 100%;
     margin-left: -100%;
-    /*margin-top: -300%;*/
     top: 3em;
-    z-index: 5;
-
+    z-index: 10;
+    
+    opacity: 1;
+    
     transition: all 1s ease;
 }
-
-.menu ul#menu-principal {
+.nav-menu ul#menu-principal {
     margin: 0;
     padding: 0;
     /*align-items: center;*/
     list-style: none;
-    
     display: flex;
     flex-direction: column;
 }
-.menu ul#menu-principal li{
+.nav-menu ul#menu-principal li{
     width: 320px;
     background-color: none;
-
     transition: all .7s ease;
 }
-.menu ul#menu-principal li:hover {
+.nav-menu ul#menu-principal li:hover {
     background: var(--menu-principal-over-fondo);
     font-weight: 900;
     transform: scale(1.1);
     text-transform: uppercase;
-
     transition: all .7s ease;
 }
-
-.menu ul#menu-principal li a {
+.nav-menu ul#menu-principal li a {
     text-decoration: none;
     display: block;
     margin: 0;
     padding: 2em 0.5em;
-
     font-size: 1em;
     color: var(--menu-principal-02-texto);
     /*text-shadow: 2px 2px 5px rgba(37, 37, 37, 0.89);    */
     text-shadow: var(--sombreado-btn-artistas);
 }
 
-.menu ul#menu-principal li a:hover {
+.nav-menu ul#menu-principal li a:hover {
     color: var(--menu-principal-over-texto);
     text-shadow: var(--sombreado-menu-over);
 }
 
-/***** Boton ARTISTAS: formato y posicionamiento **/
-.menu #label-menu-artistas {
-    display: block;
-    position: relative;
+/******************************** Boton ARTISTAS: formato y posicionamiento **/
+.top-menu-header div.div-artistas{
+    display:none;
+    position:absolute;
+    width: 100%;
     margin: 0 auto;
-    width: 70%;
-    padding: 0.5em 2em;
-    font-size: 1.4em;
+    bottom: 0;
+    /*top: 0;*/ /*se coloca dentro del menu, aunque el efecto es el correcto de presiana*/
+    left: 0;
+
+    transition: all 1s ease;
+}
+.div-artistas label#label-menu-artistas {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 1.2em;
+    text-align: center;
     border: 2px solid rgba(177, 9, 243, 0.85);
     border-radius: 2em;
     color: var(--btn-artistas);
     background-color: var(--texto-top-header);
-    text-shadow: var(--sombreado-btn-artistas);
-
     transition: all 1s ease;
 }
-.menu #label-menu-artistas:hover {
+.div-artistas label#label-menu-artistas:hover {
     color: var(--btn-over-artistas);
     background-color: var(--btn-over-fondo-artistas);
     text-shadow: var(--sombreado-btn-over-artistas);
-
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
-.menu #label-menu-artistas span.titulo-artistas {
-    padding: 0 0.2em;
+.div-artistas label#label-menu-artistas span.titulo-artistas {
+    display: block;
+    padding: 0.5em 0.2em;
     width: 100%;
     transition: all 0.5s ease;
 }
-
-.menu #label-menu-artistas span.titulo-artistas:hover {
-    font-size: x-large;
+.div-artistas label#label-menu-artistas span.titulo-artistas:hover {
     transition: all 0.5s ease;
 }
-
 /*********************/
 
 /****** formato/acciones sobre el MENU ARTISTAS */
-.menu ul#menu-artistas {
-    display: none;
-    width: 80%;
-    margin: 0;
-    padding: 0;
-
-    margin-top: -100%;
+.div-artistas ul#menu-artistas {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: -100em;
+    transition: all 3s ease-in-out;
 }
-
-.menu ul#menu-artistas li {
-    /*padding: 0.5em;*/
+.div-artistas ul#menu-artistas li {
     border-top: 1px solid #fff;
     transition: all 0.3s ease;
 }
 
-.menu ul#menu-artistas li:hover {
+.div-artistas ul#menu-artistas li:hover {
     background: var(--menu-principal-over-fondo);
     text-transform: uppercase;
 }
 
-.menu ul#menu-artistas li a {
+.div-artistas ul#menu-artistas li a {
     display: block;
-    /*margin: 0.3em 0;*/
     padding: 0.5em 0;
     color: var(--btn-over-fondo-artistas);
     font-size: 1em;
+    text-align: center;
     text-decoration: none;
     text-shadow: var(--sombreado-links-artistas);
-    /*2px 2px 5px rgba(243, 200, 200, 0.89);*/
+    transition: all 0.3s ease;
 }
 
-.menu ul#menu-artistas li a:hover {
+.div-artistas ul#menu-artistas li a:hover {
+    text-align: center;
     color: var(--menu-principal-over-texto);
     text-shadow: var(--sombreado-menu-over);
+    transition: all 0.5s ease-in-out;
 }
 
 
 /****************** chequa si estan marcados los inputs-botones ***/
 /*** Boton menu ***/
-#btn-menu:checked~#label-menu-principal {
+#btn-menu:checked~label#label-menu-principal {
     filter: drop-shadow(0px 0px 10px #000);
-    transform: rotate(90deg);
-    
-    transition: all 0.35s ease;
-}
-#btn-menu:checked~.menu {
-    margin-left: 0px;
-    box-shadow: 0px 0px 3px #000;
-    
-    transition: all 0.5s ease;
-}
-#btn-menu:checked~label#label-menu-principal{
     background:url(../icons/bx-menu.png);
     background-repeat: no-repeat;
     background-size:contain;
-    
-    transition: all 0.3s ease;
-
+    width:20px;        
+    height:20px;       
+    padding-left:20px; /*Padding igual al ancho de la imagen nueva, sino, aparece la forma de una imagen*/
+    overflow:visible;
+    transform: rotate(-90deg) translateY(-11px) translateX(7px);
+    transition: all 0.35s ease;
 }
-
-/*** Boton artistas ***/
+#btn-menu:checked~.nav-menu {
+    /*margin-top: 0px;*/
+    margin-left: 0px;
+    /*text-align: left;*/
+    box-shadow: -2px 0px 3px #000;
+    
+    transition: all 0.5s ease;
+}
+#btn-menu:checked~div.div-artistas{
+    display:flex;
+    flex-direction: column;
+    transform: translateY(var(--transladoY-div-artistas));
+    
+    transition: all 1s ease;
+}
+/******************************* Boton artistas ***/
 #btn-artistas:checked~#menu-artistas {
     display: block;
     position: relative;
     margin: 0 auto;
-    transition: all 0.3s ease;
+    transition: all 1s ease-in-out;
 }
 #btn-artistas:checked~#label-menu-artistas {
     color: var(--btn-over-artistas);
     background-color: var(--btn-over-fondo-artistas);
     text-shadow: var(--sombreado-btn-over-artistas);
-
     transition: all 1s ease;
 }
 
@@ -315,41 +340,52 @@ header.header-menu {
 /********************************************************************/
 /* Por defecto esta para Pantallas chicas menores a 575px de ancho*/
 
-@media (max-width:576px) {
-
-}
-
 /**** Pantallas con ancho minimo de 576px y max de 768px ***/
-@media (min-width:576px)/* and (max-width:768px)*/ {
+@media only screen and (min-width:576px) {
 
-    .header-menu{
+    .top-menu-header{
+        display: flex;
+        flex-direction: column;
         height: 3.5em;
-        align-items: center;
-
-        /*probando */
-        /*display: flex;
-        flex-direction: row;*/
-        /*   ***   */
+        transition: var(--transicion-top-menu-header);
     }
-
-     /* modifico el titulo */
-    /*.header-menu span#titulo-sitio,
-    .header-menu span#titulo-sitio a {
-        font-size: 1.4em;
-        
-        transition: all 1s ease;
-    }*/
- 
-
-    .header-menu span#titulo-sitio {
+/*
+    .top-menu-header span#titulo-sitio {
         /*margin: auto 0;*/
         /*padding: 0px 0.3em;*/
         /*text-transform: uppercase;*/
-        font-size: 1.6em;
+/*        font-size: 1.6em;
         text-shadow: var(--sombreado-titulo-sitio);
     
         transition: all 1s ease;
-    }
+    }*/
+    /* imagen-menu: 3 rayitas*/
+ /*   .top-menu-header label#label-menu-principal {
+        top: -1.5em;
+        left: 14em;
+        /* * */
+/*        width: 30px;
+        height: 30px;
+        padding: 5px;
+        
+        transition: all 0.35s ease;
+    }*/
+
+    /************** prueba del boton artistas en barra nav */
+
+    /* aca iria el boton artistas. separarlo del nav */
+/*    .top-menu-header div.bandas {
+        display: inline;
+        position: relative;
+        width: 50%;
+        transform: translate(1em 1em);
+        /*top: -2.5em;*/
+        /*left: 16em;*/
+        /*right: 1em;*/
+
+/*    }*/
+    /* *** */
+
 
 }
 
@@ -358,7 +394,7 @@ header.header-menu {
 @media only screen and (min-width: 768px) {/*
 @media (min-width:769px)/*and (max-width:1024px)   {*/
  
-    .menu {
+    .nav-menu {
         display: flex;
         flex-direction: row;
     
@@ -376,33 +412,20 @@ header.header-menu {
     
         transition: all 1s ease;
     }
+    .top-menu-header label#label-menu-principal{
+        display: none;
+    }
 
-    .menu ul#menu-principal {
+    .nav-menu ul#menu-principal {
         display: flex;
         flex-direction: row;
         margin: 0;
         padding: 0;
         width: 50%;
-    }
-    
-    
- /*   
-    .header-menu {
-        display: flex;
-        flex-direction: row;
-        height: 4em;
+    }   
+}
+    /**** Pantallas con ancho minimo de 1024px ***/
+    /*
+    @media only screen and (min-width: 1024px) {
 
-        transition: all 0.5s ease;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .header-menu label#label-menu-principal {
-        display: none;
-    }
-
-}*/
-    /**** Pantallas con ancho minimo de 1025px ***/
-   /* @media (min-width:1025px) {}*/
+    }*/
