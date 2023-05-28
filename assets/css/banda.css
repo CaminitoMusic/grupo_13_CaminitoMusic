@@ -2,11 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: black;
+    background-color: #400080;
+    font-weight: bold;
   }
   
   header {
     background-color: #000;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px;
   }
@@ -54,7 +57,7 @@ body {
   
   footer {
     background-color: #000;
-    color: #fff;
+    color:white;
     text-align: center;
     padding: 20px;
   }
