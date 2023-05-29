@@ -9,7 +9,7 @@ const headHome = `
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./assets/icons/caminito.ico">    
     <title>Bienvenidos a CaminitoMusic</title>
-    <link rel="stylesheet" href="./assets/css/home4.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
 `;
 document.querySelector('#head-home').innerHTML = headHome;
 /*
