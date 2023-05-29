@@ -4,8 +4,11 @@
 /*** variables ***/
 :root{
     --color-fondo-gral: #400080;
+    --color-negro: rgba(0,0,0,0.8);
     --fondo-top-header: rgba(131, 16, 125, 1);
     --texto-top-footer: #fff; 
+    --color-redes-sociales: rgba(42, 13, 110, 0.8);
+    --color-02-redes-sociales: rgba(175, 147, 240, 0.8);
     --fondo-01-footer: rgba(131, 16, 125, 1);
     --sombreado-01: 1px 1px 3px rgba(13, 13, 14, 0.8);
     --sombreado-01-titulo-sitio: 5px 5px 10px black;
@@ -127,17 +130,72 @@ main#main-home a#entrar:hover{
     transition: all 2s ease;
 
 }
-
-footer#footer-home{
+ /****** FOOTER   ******/
+footer#footer{
     width: 100%;
     height: 5em;
-    background: var(--fondo-01-footer);
+    background: var(--color-negro);
     text-align: center;
     font-size: 1.3em;
     padding: 0.5em 0;
+
+    display: flex;
+    /*align-items: center;*/
+
+    /*position:static;*/
+    left: 0;
+    bottom: 0;
 }
-footer#footer-home p{
+/*
+footer#footer p{
     padding: 1em 0;
     color: var(--texto-top-footer);
     text-shadow: var(--sombreado-01);
+}*/
+/* ** */
+.contenedor-footer-padre {
+    display:flex;
+    /*eje principal*/
+    flex-direction:row;
+    flex-wrap: wrap; /* me permite que los hijos se ajusten al contenedor */
+    justify-content: space-between; /* alinea los hijos en el eje principal */
+
+    /*eje secundario*/
+    align-items:flex-start; /* alinea los hijos en el eje secundario */
+
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+}
+.contenedor-footer-hijo1, .contenedor-footer-hijo2, 
+.contenedor-footer-hijo3, .contenedor-footer-hijo4, 
+.contenedor-footer-hijo5 {
+    background-color: var(--color-fondo-gral);
+    border: 0.3vw solid var(--color-02-redes-sociales);   
+    border-radius: 2vh;
+    padding: 1vh; 
+    margin: 0vh 1vw;
+     
+    align-self:center;
+    /*color: var(--texto-top-footer);*/   
+    transition: all 0.5s ease;
+}
+.contenedor-footer-hijo1:hover, .contenedor-footer-hijo2:hover, 
+.contenedor-footer-hijo3:hover, .contenedor-footer-hijo4:hover, 
+.contenedor-footer-hijo5:hover {
+    background-color: var(--color-02-redes-sociales);
+    border: 0.3vw solid var(--color-fondo-gral);   
+    border-radius: 1vh;
+    transition: all 0.5s ease;
+}
+.iconos-sociales {
+    color: white;
+    background-color: transparent;
+    font-size: 2vw; /* ancho vieport*/
+    padding: 0px 0.2em;
+}
+.parrafo-footer {
+    color:var(--texto-top-footer);
+    font-size: 2vw;
+    padding: 1em 0;
+    text-shadow: var(--sombreado-01-titulo-sitio);
 }
