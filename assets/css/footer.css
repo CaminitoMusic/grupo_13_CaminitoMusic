@@ -1,0 +1,62 @@
+/** FOOTER del sitio */
+/****** FOOTER   ******/
+footer#footer{
+    display:flex;
+    /*align-items: center;*/
+    flex-direction: column;
+    justify-content:space-around;
+    
+    /*eje secundario*/
+    align-items:center;
+    
+    margin: 1em 0;
+    height: 5em;
+    background: var(--color-negro);
+    text-align: center;
+    font-size: 1.3em;
+    padding: 1em 0;    
+}
+
+footer ul.footer-sociales {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-top: 2.5em;
+}
+.contenedor-footer-hijo1, .contenedor-footer-hijo2, 
+.contenedor-footer-hijo3, .contenedor-footer-hijo4, 
+.contenedor-footer-hijo5 {
+    background-color: var(--color-fondo-gral);
+    border: 0.3vw solid var(--color-02-redes-sociales);   
+    border-radius: 2vh;
+    padding: 1vh; 
+    margin: 0vh 0.5vw;
+     
+    align-self:center;
+    /*color: var(--texto-top-footer);*/   
+    transition: all 0.5s ease;
+}
+.contenedor-footer-hijo1:hover, .contenedor-footer-hijo2:hover, 
+.contenedor-footer-hijo3:hover, .contenedor-footer-hijo4:hover, 
+.contenedor-footer-hijo5:hover {
+    background-color: var(--color-02-redes-sociales);
+    border: 0.3vw solid var(--color-fondo-gral);   
+    border-radius: 1vh;
+    transition: all 0.5s ease;
+}
+.iconos-sociales {
+    margin-left: 0;
+    color: white;
+    background-color: transparent;
+    font-size: 2vw; /* ancho vieport*/
+    padding: 0px 0.2em;
+}
+.contenedor-footer-hijo6{
+    margin-top: -1em;
+}
+.contenedor-footer-hijo6 span.parrafo-footer {
+    color:var(--texto-top-footer);
+    font-size: 1.5vw;
+}

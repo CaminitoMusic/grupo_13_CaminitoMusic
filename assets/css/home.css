@@ -4,8 +4,11 @@
 /*** variables ***/
 :root{
     --color-fondo-gral: #400080;
+    --color-negro: rgba(0,0,0,0.8);
     --fondo-top-header: rgba(131, 16, 125, 1);
     --texto-top-footer: #fff; 
+    --color-redes-sociales: rgba(42, 13, 110, 0.8);
+    --color-02-redes-sociales: rgba(175, 147, 240, 0.8);
     --fondo-01-footer: rgba(131, 16, 125, 1);
     --sombreado-01: 1px 1px 3px rgba(13, 13, 14, 0.8);
     --sombreado-01-titulo-sitio: 5px 5px 10px black;
@@ -94,7 +97,7 @@ main#main-home h2 {
 }
 main#main-home p#mision{
     padding: 0;
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: center;
     color: #BBBBBB;
     text-shadow: none;
@@ -127,17 +130,4 @@ main#main-home a#entrar:hover{
     transition: all 2s ease;
 
 }
-
-footer#footer-home{
-    width: 100%;
-    height: 5em;
-    background: var(--fondo-01-footer);
-    text-align: center;
-    font-size: 1.3em;
-    padding: 0.5em 0;
-}
-footer#footer-home p{
-    padding: 1em 0;
-    color: var(--texto-top-footer);
-    text-shadow: var(--sombreado-01);
-}
+ /****** FOOTER   ******/
