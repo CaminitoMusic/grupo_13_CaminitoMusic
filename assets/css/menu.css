@@ -392,10 +392,12 @@ header.header-menu {
         position:relative;
         top: 0;
         left:0em;
-        
+        margin-top:0;/*-100%;*/
         min-width: 150px;/*par que el boton no se agrande mucho */
         max-width: 300px;/*par que el boton no se agrande mucho */
         align-self: center;
+        opacity: 1;
+        transition: all 0.5s;
     }
     .menu #label-menu-artistas {
         display: block;

@@ -1,71 +1,13 @@
 /*** ESTRUCTURA DEL SITIO CON DOM */
 /** HEAD SITIO -no home- */
-const headHome = `
-<meta charset="UTF-8">
+let headMenu = `
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./assets/icons/caminito.ico">    
-    <title>Bienvenidos a CaminitoMusic</title>
-    <link rel="stylesheet" href="./assets/css/home.css">
-`;
-document.querySelector('#head-home').innerHTML = headHome;
-/*
-const headSite = ``;
-document.querySelector('#head-site').innerHTML = headSite;
-*/
+    <link rel="icon" href="../assets/icons/caminito.ico">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <title>CaminitoMusic</title>`;
+document.getElementById('head-menu').innerHTML = headMenu;
 
-/*** HEADER del sitio -no home-***/
-/*
-const headerSite = ``;
-document.querySelector('').innerHTML = headerSite;
-*/
 
-/****** FOOTER -comun para todo el sitio- */
-const footerSite = `
-<ul class="footer-sociales">
-            <li>
-                <div class="contenedor-footer-hijo1">
-                    <a href="https://www.twitter.com" class="iconos-sociales" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="contenedor-footer-hijo2">
-                    <a href="https://www.facebook.com" class="iconos-sociales" target="_blank">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="contenedor-footer-hijo3">
-                    <a href="https://www.pinterest.com" class="iconos-sociales" target="_blank">
-                        <i class="fa-brands fa-pinterest"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="contenedor-footer-hijo4">
-                    <a href="https://www.instagram.com" class="iconos-sociales" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="contenedor-footer-hijo5">
-                    <a href="https://www.linkedin.com" class="iconos-sociales" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <div class="contenedor-footer-hijo6">
-            <p>
-                <span class="parrafo-footer">@2023 Derechos Reservados </span>
-            </p>
-        </div>
-`;
-document.querySelector('#footer').innerHTML = footerSite;
+

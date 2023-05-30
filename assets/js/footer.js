@@ -1,5 +1,4 @@
 /** FOOTER del SITIO */
-
 const footerSite = `
 <ul class="footer-sociales">
             <li>
@@ -42,7 +41,6 @@ const footerSite = `
             <p>
                 <span class="parrafo-footer">@2023 Derechos Reservados </span>
             </p>
-        </div>
-`;
+        </div>`;
 
-document.querySelector('#footer').innerHTML = footerSite;
+document.getElementById('footer').innerHTML = footerSite;

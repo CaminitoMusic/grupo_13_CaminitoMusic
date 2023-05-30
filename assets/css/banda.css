@@ -6,25 +6,31 @@ body {
     background-color: #400080;
     font-weight: bold;
   }
-  
+  /*
   header {
     background-color: #000;
     color: white;
     text-align: center;
     padding: 20px;
-  }
+  }*/
   
-  header h1 {
-    margin: 0;
-    font-size: 40px;
-  }
+  
   
   main {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
   }
-  
+
+  main h1 {
+
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    background-color: #000;
+  }
+
   main h2 {
     font-size: 28px;
     margin-top: 40px;
