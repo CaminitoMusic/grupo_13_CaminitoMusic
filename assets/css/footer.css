@@ -1,6 +1,21 @@
+/*** variables de colores */
+:root{
+    --color-fondo-gral: #400080;
+    --color-negro: rgba(0,0,0,0.8);
+    --fondo-top-header: rgba(131, 16, 125, 1);
+    --texto-top-footer: #fff; 
+    --color-redes-sociales: rgba(42, 13, 110, 0.8);
+    --color-02-redes-sociales: rgba(175, 147, 240, 0.8);
+    --fondo-01-footer: rgba(131, 16, 125, 1);
+    --sombreado-01: 1px 1px 3px rgba(13, 13, 14, 0.8);
+    --sombreado-01-titulo-sitio: 5px 5px 10px black;
+
+    --sombreado-texto-entrar: 1px 1px 5px rgba(80, 2, 90, 0.8);
+}
+
 /** FOOTER del sitio */
 /****** FOOTER   ******/
-footer#footer{
+footer.footer{
     display:flex;
     /*align-items: center;*/
     flex-direction: column;
@@ -11,7 +26,7 @@ footer#footer{
     
     margin: 1em 0;
     height: 5em;
-    background: var(--color-negro);
+    background: black;
     text-align: center;
     font-size: 1.3em;
     padding: 1em 0;    
@@ -23,7 +38,6 @@ footer ul.footer-sociales {
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 0;
-    margin-top: 2.5em;
 }
 .contenedor-footer-hijo1, .contenedor-footer-hijo2, 
 .contenedor-footer-hijo3, .contenedor-footer-hijo4, 
@@ -50,13 +64,13 @@ footer ul.footer-sociales {
     margin-left: 0;
     color: white;
     background-color: transparent;
-    font-size: 2vw; /* ancho vieport*/
+    font-size: 1.5vw; /* ancho vieport*/
     padding: 0px 0.2em;
 }
 .contenedor-footer-hijo6{
-    margin-top: -1em;
+    /* margin-top: -1em;*/ /* no funca para el sitio gral.*/
 }
 .contenedor-footer-hijo6 span.parrafo-footer {
     color:var(--texto-top-footer);
-    font-size: 1.5vw;
+    font-size: 1rem;
 }

@@ -43,4 +43,4 @@ const footerSite = `
             </p>
         </div>`;
 
-document.getElementById('footer').innerHTML = footerSite;
+document.querySelector('.footer').innerHTML = footerSite;
