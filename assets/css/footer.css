@@ -9,13 +9,12 @@ footer#footer{
     /*eje secundario*/
     align-items:center;
     
+    margin: 1em 0;
     height: 5em;
     background: var(--color-negro);
     text-align: center;
     font-size: 1.3em;
-    padding: 1em 0;
-
-    
+    padding: 1em 0;    
 }
 
 footer ul.footer-sociales {
@@ -24,7 +23,7 @@ footer ul.footer-sociales {
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 0;
-
+    margin-top: 2.5em;
 }
 .contenedor-footer-hijo1, .contenedor-footer-hijo2, 
 .contenedor-footer-hijo3, .contenedor-footer-hijo4, 
@@ -54,7 +53,10 @@ footer ul.footer-sociales {
     font-size: 2vw; /* ancho vieport*/
     padding: 0px 0.2em;
 }
+.contenedor-footer-hijo6{
+    margin-top: -1em;
+}
 .contenedor-footer-hijo6 span.parrafo-footer {
     color:var(--texto-top-footer);
-    font-size: 2.3vw;
+    font-size: 1.5vw;
 }
