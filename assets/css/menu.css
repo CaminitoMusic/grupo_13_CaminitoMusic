@@ -8,6 +8,7 @@
 
     --color-fondo-gral: #400080;
     --fondo-top-header: rgba(131, 16, 125, 1);
+    --fondo02-top-header: rgba(17, 16, 17,1);
     --texto-top-header: #fff;
 
     /**** menu princpal ***/
@@ -413,28 +414,21 @@ header.header {
         transition: all 0.5s ease;
     }
     div.artistas ul#menu-artistas{
-        background: var(--color-02-fondo-menu);
+        background: var(--color-02F-fondo-menu);
         display: none;
-        position: absolute;
-
-        /*padding: 0% 2em;*/
-        /*margin: 0% 0.5em;*/
-        
-/*** */
-        left:-10em;
-        top: 1.2em;
-
+        top:-3.6rem; /*luego cambiarlo para que se vaya arriba*/
         width:max-content;
-        height: 4em;
+        height: 5em;
         
-        justify-content: space-evenly;
-        align-items: center;
+        
+        /*justify-content: space-evenly;*/
+        /*align-items: center;*/
 
     }
     
     #btn-artistas:checked~#menu-artistas {
         display: flex;
-        position: relative;
+        /*position: ;*/
         align-items: center;
         justify-content: space-around;
         left: -203%;

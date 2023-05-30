@@ -1,3 +1,9 @@
+/*colores */
+:root{
+  --color-fondo-titulo: rgba(102, 8, 99, 0.8);
+  --color02-fondo-titulo: rgba(10, 10, 10, 0.8);
+}
+
 .body {
     /*font-family: Arial, sans-serif;*/
     margin: 0;
@@ -9,9 +15,9 @@
     
   main {
     /*max-width: 800px;*/
-    width: 90%;
+    width: 100%;
     margin:0 auto; /*20px auto;*/
-    padding: 0 20px;
+    /*padding: 0 20px;*/
   }
 
   main h1 {
@@ -19,36 +25,44 @@
     font-size: 3em;
     text-align: center;
     color: white;
-    background-color: #000;
+    background-color: var(--color02-fondo-titulo);
   }
 
   main h2 {
-    font-size: 28px;
+    font-size: 2.5em;
     margin-top: 40px;
+    text-align: center;
   }
   
   main p {
+    width: 90%;
+    margin: 0 auto;
+    /*text-align: justify;*/
     line-height: 1.5;
     margin-top: 20px;
+    font-size: 1.2em;
   }
   
   main ul {
+    width: 100%;
     margin-top: 20px;
     list-style: none;
-    padding-left: 0;
+    text-align: center;
   }
   
   main li {
     margin-bottom: 10px;
+    font-size: 1.1em;
   }
   
   .imagenes {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 20px;    
   }
   
   .imagenes img {
     max-width: 30%;
+    padding: 0 1em;
   }
   
