@@ -17,4 +17,4 @@ const headerHome = `
         <span id="titulo-sitio">Caminito
             <span id="titulo-music">Music</span>
         </span>`;
-document.querySelector('.header-home').innerHTML = headerHome;
+document.querySelector('.header').innerHTML = headerHome;

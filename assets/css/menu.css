@@ -13,6 +13,7 @@
     /**** menu princpal ***/
     --color-fondo-menu: rgba(175, 174, 180, 0.8);
     --color-02-fondo-menu: rgba(92, 2, 62, 0.5);
+    --color-02F-fondo-menu: rgba(92, 2, 62, 1);
     --color-03-fondo-menu: rgba(11, 4, 70, 0.5);
     --color-04-fondo-menu:rgba(131, 16, 125, 0.65);
     
@@ -69,7 +70,7 @@ body {
 }
 
 /*** header ***/
-header.header-menu {
+header.header {
     display: flex;
     width: 100%;
     height: 3em;
@@ -82,7 +83,7 @@ header.header-menu {
 
 
 /*** titulo-logo ***/
-.header-menu span#titulo-sitio {
+.header span#titulo-sitio {
     margin: auto 0;
     padding: 0px 0.3em;
     text-transform: uppercase;
@@ -91,11 +92,11 @@ header.header-menu {
 
     transition: all 0.5s ease;
 }
-.header-menu span#titulo-sitio a {
+.header span#titulo-sitio a {
     color: var(--texto-top-header);
     text-decoration: none;
 }
-.header-menu span#titulo-sitio a span#titulo-music {
+.header span#titulo-sitio a span#titulo-music {
     font-weight: 900;
     color: var(--color-titulo-music);
     text-shadow: var(--sombreado-titulo-music);
@@ -110,7 +111,7 @@ header.header-menu {
 }
 
 /* imagen-menu: 3 rayitas*/
-.header-menu label#label-menu-principal {
+.header label#label-menu-principal {
     display: block;
     width: 30px;
     height: 30px;
@@ -123,7 +124,7 @@ header.header-menu {
     transition: all 0.35s ease;
     /*border-right: 1px s #fff;*/
 }
-.header-menu label#label-menu-principal img#img-menu {
+.header label#label-menu-principal img#img-menu {
     box-sizing:border-box;
     display:block;
     width:30px;        /*Ancho de la imagen nueva.*/
@@ -135,8 +136,8 @@ header.header-menu {
     transition: all 0.35s ease;
 }
 
-.header-menu label#label-menu-principal:hover,
-.header-menu label#label-menu-artistas:hover {
+.header label#label-menu-principal:hover,
+.header label#label-menu-artistas:hover {
     cursor: pointer;
     filter: var(--filtro-btn-menu);
 }
@@ -168,6 +169,7 @@ header.header-menu {
     width: 100%;
     background-color: none;
     pointer-events: all;
+    justify-content: space-between;
     transition: all .5s ease;
 }
 .menu ul#menu-principal li:hover {
@@ -222,10 +224,6 @@ header.header-menu {
 .menu #label-menu-artistas span.titulo-artistas {
     padding: 0 0.2em;
     width: 100%;
-    transition: all 0.5s ease;
-}
-.menu #label-menu-artistas span.titulo-artistas:hover {
-    font-size: x-large;
     transition: all 0.5s ease;
 }
 
@@ -313,12 +311,12 @@ header.header-menu {
 /**** Pantallas con ancho minimo de 576px y max de 768px ***/
 @media (min-width:576px)/* and (max-width:768px)*/ {
 
-    header.header-menu{
+    header.header{
         height: 3.5em;
         align-items: center;
     }
 
-    header.header-menu span#titulo-sitio {
+    header.header span#titulo-sitio {
         /*margin: auto 0;*/
         /*padding: 0px 0.3em;*/
         /*text-transform: uppercase;*/
@@ -332,15 +330,15 @@ header.header-menu {
 /**** Pantallas con ancho minimo de 769px y max de 1024px ***/
 @media (min-width: 768px) {
 
-    header.header-menu {
+    header.header {
         height: 5em;
         align-items:center;
         padding-top: 0;
     }
-    .header-menu label#label-menu-principal{
+    .header label#label-menu-principal{
         display: none;
     }
-    .header-menu nav.menu {
+    .header nav.menu {
         display: flex;
         flex-direction: row;
         position:sticky;
@@ -388,15 +386,17 @@ header.header-menu {
 
 /***** Menu Artistas ***/
     .menu div.artistas{
-        display:inline;
+        display:flex;
+        flex-direction: column;
         position:relative;
-        top: 0;
-        left:0em;
-        margin-top:0;/*-100%;*/
+        top: 1.2em; /* para centrar al div en el nav */
+        /*left:0em;*/
+        margin:0; /*15em;*/ /*-100%;*/
         min-width: 150px;/*par que el boton no se agrande mucho */
         max-width: 300px;/*par que el boton no se agrande mucho */
-        align-self: center;
-        opacity: 1;
+        align-self:baseline;
+        /*opacity: 1;*/
+        
         transition: all 0.5s;
     }
     .menu #label-menu-artistas {
@@ -406,56 +406,50 @@ header.header-menu {
         font-size: 1.2em;
         transition: all 1s ease;
     }
-    #btn-artistas:checked~#menu-artistas {
-        display: block;
-        position: relative;
-        /*margin: 0 auto;*/
-
-        top: 0em;
-        left: 0;
-        margin-top: 17em;
-
-        z-index: 15;
-        opacity: 1;
-        transition: all 0.3s ease;
-    }
-    /*
-    .menu #label-menu-artistas:hover {
-        color: var(--btn-over-artistas);
-        background-color: var(--btn-over-fondo-artistas);
-        text-shadow: var(--sombreado-btn-over-artistas);
-        transition: all 0.5s ease;
-    }
     
     .menu #label-menu-artistas span.titulo-artistas {
         padding: 0 0.2em;
         width: 100%;
         transition: all 0.5s ease;
     }
-    .menu #label-menu-artistas span.titulo-artistas:hover {
+    div.artistas ul#menu-artistas{
+        background: var(--color-02-fondo-menu);
+        display: none;
+        position: absolute;
+
+        /*padding: 0% 2em;*/
+        /*margin: 0% 0.5em;*/
         
-        transition: all 0.5s ease;
-    }*/
+/*** */
+        left:-10em;
+        top: 1.2em;
+
+        width:max-content;
+        height: 4em;
+        
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    
+    #btn-artistas:checked~#menu-artistas {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-around;
+        left: -203%;
+        /*width: 768px;*/
+        
+
+/*
+        z-index: 15;
+        opacity: 1;*/
+        transition: all 0.3s ease;
+    }
 
 }
     
- /*   
-    .header-menu {
-        display: flex;
-        flex-direction: row;
-        height: 4em;
+ 
 
-        transition: all 0.5s ease;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .header-menu label#label-menu-principal {
-        display: none;
-    }
-
-}*/
     /**** Pantallas con ancho minimo de 1025px ***/
    /* @media (min-width:1025px) {}*/
