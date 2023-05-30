@@ -1,6 +1,6 @@
-/*** ESTRUCTURA DEL SITIO CON DOM */
-/** HEAD SITIO -no home- */
-let headMenu = `
+let headFormu = `
+	<!-- Enlazar los estilos de Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,11 @@ let headMenu = `
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../assets/icons/caminito.ico">
     <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/formulario.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/banda.css">
     <title>CaminitoMusic</title>`;
-document.getElementById('head-menu').innerHTML = headMenu;
+
+document.getElementById('head-formu').innerHTML = headFormu;
 
 let headerMenu = `
     <span id="titulo-sitio">
@@ -48,7 +49,3 @@ let headerMenu = `
         </div>
     </nav>`;
 document.querySelector('.header').innerHTML = headerMenu;
-
-
-
-
