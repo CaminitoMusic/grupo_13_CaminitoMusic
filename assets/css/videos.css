@@ -1,5 +1,5 @@
 /* CSS para la pagina videos */
-  .grid-container {
+  main.videos-main .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -7,11 +7,11 @@
     padding: 20px;
   }
   
-  .grid-container div.item {
+  main.videos-main .grid-container div.item {
     text-align: center;
   }
   
-  .grid-container div.item img {
+  main.videos-main .grid-container div.item img {
     width: 200px;
     height: auto;
   }

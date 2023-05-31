@@ -27,7 +27,7 @@ let headerMenu = `
 <nav class="menu">
 <!--menu principal-->
 <ul id="menu-principal">
-    <li><a href="./menu.html">Inicio</a></li>
+    <li><a href="./index.html">Inicio</a></li>
     <li><a href="/conciertos.html">Conciertos</a></li>
     <li><a href="./videos.html">Videos</a></li>
     <li><a href="./contacto.html">Contacto</a></li>
