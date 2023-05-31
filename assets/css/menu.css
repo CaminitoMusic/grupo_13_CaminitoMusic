@@ -12,9 +12,9 @@
     --texto-top-header: #fff;
 
     /**** menu princpal ***/
-    --color-fondo-menu: rgba(175, 174, 180, 0.8);
+    --color-fondo-menu: rgba(175, 174, 180,1);
     --color-02-fondo-menu: rgba(92, 2, 62, 0.5);
-    --color-02F-fondo-menu: rgba(92, 2, 62, 1);
+    --color-azul-fondo-menu: rgb(39, 26, 99);
     --color-03-fondo-menu: rgba(11, 4, 70, 0.5);
     --color-04-fondo-menu:rgba(131, 16, 125, 0.65);
     
@@ -46,8 +46,9 @@
     --btn-over-fondo-artistas: rgba(61, 6, 124, 0.911);
     --sombreado-btn-over-artistas: 3px 3px 10px rgb(201, 144, 238), 5px 5px 8px rgb(77, 61, 87), 13px 13px 25px rgba(240, 73, 73, 0.89);
     /** Colores menu artistas ***/
-    --color-links-artistas: rgb(245, 138, 17);
+    --color-links-artistas: rgb(212, 209, 206);
     --sombreado-links-artistas: 2px 2px 3px rgba(46, 6, 6, 0.8);
+    --sombreado-over-links-artistas: 2px 2px 3px rgba(238, 82, 238, 0.8);
 
     --sombreado-otro:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
@@ -78,6 +79,9 @@ header.header {
     background: var(--fondo-top-header);
     z-index: 100;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     transition: var(--transicion-header-menu);
 }
@@ -150,7 +154,7 @@ header.header {
     position: absolute;
     align-items: center;
     text-align: center;
-    background: var(--color-fondo-menu);
+    /*background: var(--color-02F-fondo-menu);*/
     width: 100%;
     margin-left: -100%;
     top: 3em;
@@ -164,6 +168,7 @@ header.header {
     flex-direction: column;
     list-style: none;
     width: 100%;
+    background: var(--color-fondo-menu);
     
 }
 .menu ul#menu-principal li{
@@ -197,7 +202,7 @@ header.header {
 .menu div.artistas{
     display: block;
     position: relative;
-    top: 1em;
+    /*top: 1em;*/
     width: 100%;
 }
 .menu #label-menu-artistas {
@@ -357,8 +362,8 @@ header.header {
         flex-direction: row;
         margin: 0;
         padding: 0;
-
-        place-content: space-between;
+        background: none;
+        place-content: space-around;
     }
     .menu ul#menu-principal li{
         /*display: inline;*/
@@ -385,72 +390,98 @@ header.header {
         text-shadow: var(--sombreado-menu-over);
     }
 
-/***** Menu Artistas ***/
+    /*****MEDIA QUERY MIN-WIDTH:768px - Menu Artistas ***/
+    
     .menu div.artistas{
-        display:flex;
+        display: flex;
         flex-direction: column;
-        position:relative;
- /*       top: 1.2em; /* para centrar al div en el nav */
-        /*left:0em;*/
- /*       margin:0; /*15em;*/ /*-100%;*/
- /*       min-width: 150px;/*par que el boton no se agrande mucho */
-        max-width: 180px;/*par que el boton no se agrande mucho */
-        align-self:baseline;
-        
-        transition: all 0.5s;
+        position: relative;
+        /*width: 100%;*/
     }
 
-
+    
     .menu #label-menu-artistas {
-        display: inline;
-        position: relative;
-        padding: 0.3em 0.2em;
-        font-size: 1.2em;
-        /*top: 0.8em;*/
-        left: -2em;
+        display:inline;
+        position:relative;
+        margin:0;
+        padding: 0.2em 2em;
 
+        
+        
+        /*width: 95%;*/
+        
+        /*font-size: 1.4em;*/
+        /*border: 2px solid rgba(177, 9, 243, 0.85);*/
+        /*border-radius: 2em;*/
+        /*color: var(--btn-artistas);*/
+        /*background-color: var(--texto-top-header);*/
+        /*text-shadow: var(--sombreado-btn-artistas);*/
+    
+        width: 2em;
         transition: all 1s ease;
     }
+    */
     /*
+    .menu #label-menu-artistas:hover {
+        color: var(--btn-over-artistas);
+        background-color: var(--btn-over-fondo-artistas);
+        text-shadow: var(--sombreado-btn-over-artistas);
+    
+        transition: all 0.5s ease;
+    }
+    */
+    
     .menu #label-menu-artistas span.titulo-artistas {
-        padding: 0 0.2em;
+        display: inline;
+
+        /*padding: 0 0.2em;*/
         width: 100%;
         transition: all 0.5s ease;
-    }*/
-    div.artistas ul#menu-artistas{
-        background: var(--color-02F-fondo-menu);
-        display: flex; /*none;*/
-        flex-direction: column;
-        width: 767px;
+    }
+    
+    /****** formato/acciones sobre el MENU ARTISTAS */
+    .menu ul#menu-artistas {
+        display: /*block; */ none;
+        
+        /* width: 100%;*/
+        margin-top: 17em; /* -100%;*/
+        margin-left: 0em;        
+        
+        background: var(--color-azul-fondo-menu);
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+    .menu ul#menu-artistas li {
+        /*color:var(--btn-artistas);*/
+        border-bottom: 1px solid rgba(102, 8, 60, 0.5);
+        
+        transition: all 0.5s ease;
+    }
 
-
-
-
-    /*    top:-3.6rem; /*luego cambiarlo para que se vaya arriba*/
-    /*    width:max-content;
-        height: 5em;*/
-       
+    
+    .menu ul#menu-artistas li:hover {
+        background: var(--color-04-fondo-menu);
+        text-transform: none;
+        /*color: var(--texto-top-header);*/
 
     }
     
-    #btn-artistas:checked~#menu-artistas {
-        display: flex;
-        /*position: ;*/
-        align-items: center;
-        justify-content: space-around;
-        left: -203%;
-        /*width: 768px;*/
-        
+    .menu ul#menu-artistas li a {
+        display: block;
+        padding: 0.7em 0;
+        color:var(--color-links-artistas);
+        font-size: 1em;
+        /*text-shadow: 2px 2px 4px rgba(166, 12, 238, 0.8), 1px 1px 5px rgba(175, 174, 180, 0.8);*/
+        text-shadow: var(--sombreado-links-artistas);
+    }
 
-/*
-        z-index: 15;
-        opacity: 1;*/
+    
+    .menu ul#menu-artistas li a:hover {
+        /*color: var(--menu-principal-over-texto);*/
+        color: var(--menu-principal-texto);
+        text-shadow: var(--sombreado-over-links-artistas);
         transition: all 0.3s ease;
     }
 
 }
-    
- 
-
-    /**** Pantallas con ancho minimo de 1025px ***/
-   /* @media (min-width:1025px) {}*/

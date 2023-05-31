@@ -1,0 +1,18 @@
+/* CSS para la pagina videos */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+  
+  .grid-container div.item {
+    text-align: center;
+  }
+  
+  .grid-container div.item img {
+    width: 200px;
+    height: auto;
+  }
+  
