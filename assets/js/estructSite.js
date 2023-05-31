@@ -11,6 +11,7 @@ let headMenu = `
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/banda.css">
+    <link rel="stylesheet" href="../assets/css/videos.css">
     <title>CaminitoMusic</title>`;
 document.getElementById('head-menu').innerHTML = headMenu;
 
@@ -26,10 +27,10 @@ let headerMenu = `
     <nav class="menu">
         <!--menu principal-->
         <ul id="menu-principal">
-            <li><a href="../home.html">Inicio</a></li>
-            <li><a href="#">Conciertos</a></li>
-            <li><a href="#">Canciones</a></li>
-            <li><a href="../pages/formulario.html">Contacto</a></li>
+            <li><a href="./menu.html">Inicio</a></li>
+            <li><a href="/conciertos.html">Conciertos</a></li>
+            <li><a href="./videos.html">Videos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
         <div class="artistas">
             <!--boton y menu artistas-->
@@ -38,12 +39,12 @@ let headerMenu = `
                 <span class="titulo-artistas">Artistas</span>
             </label>
             <ul id="menu-artistas">
-                <li><a href="">8 AM</a></li>
-                <li><a href="../pages/Radiohead.html">Radiohead</a></li>
-                <li><a href="../pages/Metallica.html">Metallica</a></li>
-                <li><a href="../pages/RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
-                <li><a href="../pages/TheStrokes.html">The Strokes</a></li>
-                <li><a href="../pages/FleetwoodMac.html">Fleetwood Mac</a></li>
+                <li><a href="#">8 AM</a></li>
+                <li><a href="./Radiohead.html">Radiohead</a></li>
+                <li><a href="./Metallica.html">Metallica</a></li>
+                <li><a href="./RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
+                <li><a href="./TheStrokes.html">The Strokes</a></li>
+                <li><a href="./FleetwoodMac.html">Fleetwood Mac</a></li>
             </ul>
         </div>
     </nav>`;

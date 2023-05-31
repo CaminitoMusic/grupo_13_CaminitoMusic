@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head id="head-formu">
+	<!--
+	<title>Formulario</title>
+	 Enlazar los estilos de Bootstrap -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	 Enlazar tu archivo de estilos personalizado -->
+	<!--	<link rel="stylesheet" href="../assets/css/style.css">
+-->
+</head>
+
+<body>
+	<header class="header" id="header-contacto"></header>
+	<main class="main" id="main-contacto">
+		<div class="container mt-5">
+			<h1>Formulario para contactarnos</h1>
+			<form action="procesar-formulario.php" method="POST">
+				<div class="form-group">
+					<strong><label for="nombre">Nombre:</label></strong>
+					<input type="text" class="form-control" id="nombre" name="nombre" required>
+				</div>
+				<div class="form-group">
+					<strong><label for="apellido">Apellido:</label>
+						<input type="text" class="form-control" id="apellido" name="apellido" required>
+				</div>
+				<div class="form-group">
+					<strong><label for="email">Email:</label></strong>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<strong>Teléfono:</strong>
+					<input type="tel" class="form-control" id="telefono" name="telefono" required>
+				</div>
+				<div class="form-group">
+					<strong><label for="comentario">Pon aqui tu inquietud o Comentario:</label></strong>
+					<textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+		</div>
+	</main>
+	<footer class="footer" id="footer-Formulario"></footer>
+
+	<!-- Enlazar los scripts de Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper-core.min.js"
+		integrity="sha384-ZxdVKF+AC0+lXIHtrR9sIhQQmWz5b2Ok8I/ZsE3NpO5xFeEjGMjjT3neB/JeRn2C"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="../assets/js/form.js"></script>
+	<script src="../assets/js/footer.js"></script>
+
+</body>
+
+</html>

@@ -44,8 +44,8 @@ footer ul.footer-sociales {
 .contenedor-footer-hijo5 {
     background-color: var(--color-fondo-gral);
     border: 0.3vw solid var(--color-02-redes-sociales);   
-    border-radius: 2vh;
-    padding: 1vh; 
+    border-radius: 1.2vh;
+    padding: 0.5vh; 
     margin: 0vh 0.5vw;
      
     align-self:center;
@@ -57,14 +57,14 @@ footer ul.footer-sociales {
 .contenedor-footer-hijo5:hover {
     background-color: var(--color-02-redes-sociales);
     border: 0.3vw solid var(--color-fondo-gral);   
-    border-radius: 1vh;
+    border-radius: 0.7vh;
     transition: all 0.5s ease;
 }
 .iconos-sociales {
     margin-left: 0;
     color: white;
     background-color: transparent;
-    font-size: 1.5vw; /* ancho vieport*/
+    font-size: 1.8vw; /* ancho vieport*/
     padding: 0px 0.2em;
 }
 .contenedor-footer-hijo6{

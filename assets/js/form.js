@@ -9,43 +9,43 @@ let headFormu = `
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../assets/icons/caminito.ico">
     <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="stylesheet" href="../assets/css/contacto.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <title>CaminitoMusic</title>`;
 
 document.getElementById('head-formu').innerHTML = headFormu;
 
 let headerMenu = `
-    <span id="titulo-sitio">
-        <a href="#">Caminito<span id="titulo-music">Music</span></a>
-    </span>
-    <!-- input para el boton del menu principal-->
-    <input type="checkbox" id="btn-menu">
-    <label for="btn-menu" id="label-menu-principal">
-        <img id="img-menu" alt="Imagen Menu">
+<span id="titulo-sitio">
+<a href="#">Caminito<span id="titulo-music">Music</span></a>
+</span>
+<!-- input para el boton del menu principal-->
+<input type="checkbox" id="btn-menu">
+<label for="btn-menu" id="label-menu-principal">
+<img id="img-menu" alt="Imagen Menu">
+</label>
+<nav class="menu">
+<!--menu principal-->
+<ul id="menu-principal">
+    <li><a href="./menu.html">Inicio</a></li>
+    <li><a href="/conciertos.html">Conciertos</a></li>
+    <li><a href="./videos.html">Videos</a></li>
+    <li><a href="./contacto.html">Contacto</a></li>
+</ul>
+<div class="artistas">
+    <!--boton y menu artistas-->
+    <input type="checkbox" id="btn-artistas">
+    <label for="btn-artistas" id="label-menu-artistas">
+        <span class="titulo-artistas">Artistas</span>
     </label>
-    <nav class="menu">
-        <!--menu principal-->
-        <ul id="menu-principal">
-            <li><a href="../home.html">Inicio</a></li>
-            <li><a href="#">Conciertos</a></li>
-            <li><a href="#">Canciones</a></li>
-            <li><a href="../pages/formulario.html">Contacto</a></li>
-        </ul>
-        <div class="artistas">
-            <!--boton y menu artistas-->
-            <input type="checkbox" id="btn-artistas">
-            <label for="btn-artistas" id="label-menu-artistas">
-                <span class="titulo-artistas">Artistas</span>
-            </label>
-            <ul id="menu-artistas">
-                <li><a href="">8 AM</a></li>
-                <li><a href="../pages/Radiohead.html">Radiohead</a></li>
-                <li><a href="../pages/Metallica.html">Metallica</a></li>
-                <li><a href="../pages/RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
-                <li><a href="../pages/TheStrokes.html">The Strokes</a></li>
-                <li><a href="../pages/FleetwoodMac.html">Fleetwood Mac</a></li>
-            </ul>
-        </div>
-    </nav>`;
+    <ul id="menu-artistas">
+        <li><a href="">8 AM</a></li>
+        <li><a href="./Radiohead.html">Radiohead</a></li>
+        <li><a href="./Metallica.html">Metallica</a></li>
+        <li><a href="./RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
+        <li><a href="./TheStrokes.html">The Strokes</a></li>
+        <li><a href="./FleetwoodMac.html">Fleetwood Mac</a></li>
+    </ul>
+</div>
+</nav>`;
 document.querySelector('.header').innerHTML = headerMenu;
