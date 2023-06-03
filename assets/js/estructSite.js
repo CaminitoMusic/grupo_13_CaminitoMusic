@@ -10,8 +10,9 @@ let headMenu = `
     <link rel="icon" href="../assets/icons/caminito.ico">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/banda.css">
+    <!-- <link rel="stylesheet" href="../assets/css/banda.css"> -->
     <link rel="stylesheet" href="../assets/css/videos.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <title>CaminitoMusic</title>`;
 document.getElementById('head-menu').innerHTML = headMenu;
 
