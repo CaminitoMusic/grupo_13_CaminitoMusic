@@ -11,7 +11,7 @@
     text-align: center;
   }
   
-  main.videos-main .grid-container div.item img {
+  main.videos-main .grid-container div.item iframe {
     width: 200px;
     height: auto;
   }
