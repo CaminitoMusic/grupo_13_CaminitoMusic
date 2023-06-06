@@ -1,18 +1,110 @@
 /* CSS para la pagina videos */
-  main.videos-main .grid-container {
-    display: grid;
+
+main.videos-main .videos-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.8em;
+  padding: 1em;
+  background-color: var(--fondo-01-carr); /*#400080;*/
+}
+
+main.videos-main div.videos-container div.item h2 {
+  color: white;
+}
+
+main.videos-main div.videos-container div.item p {
+  color: wheat;
+  width: 100%;
+}
+
+
+.videos-container .item {
+  /*box-shadow: 1px 1px 3px rgba(8, 11, 48, 0.863);*/
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec);
+}
+
+.videos-container .item iframe {
+  width: 100%;
+  border-radius: 0.5em;
+  /*box-shadow: 0.5em 0.5em 0.5em var(--negro), -0.2em -0.2em 0.5em var(--sombra-sec);*/
+}
+
+/***** MEDIAS QUERIES **************/
+/* de hasta 575px ***/
+@media (max-width: 575px) {
+  main.videos-main h1 {
+    font-size: 2em;
+  }
+
+  main.videos-main .videos-container .item h2 {
+    font-size: 1.5em;
+  }
+
+  main.videos-main .videos-container .item p {
+    font-size: 1em;
+  }
+}
+
+
+/*  de minimo de ancho: 576px ***/
+
+@media (min-width: 576px) {
+  main.videos-main h1 {
+    font-size: 2.5em;
+  }
+
+  main.videos-main .videos-container .item h2 {
+    font-size: 2em;
+  }
+
+  main.videos-main .videos-container .item p {
+    font-size: 1.5em;
+  }
+}
+
+/*  de minimo de ancho: 769px ***/
+@media (min-width: 769px) {
+  main.videos-main .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main.videos-main h1 {
+    font-size: 2.5em;
+  }
+
+  main.videos-main .videos-container .item h2 {
+    font-size: 2em;
+  }
+
+  main.videos-main .videos-container .item p {
+    font-size: 1.5em;
+  }
+
+}
+
+/*  de minimo de ancho: 1025px ***/
+@media (min-width: 1025px) {
+  main.videos-main .videos-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
   }
-  
-  main.videos-main .grid-container div.item {
-    text-align: center;
+
+  main.videos-main h1 {
+    font-size: 4em;
   }
-  
-  main.videos-main .grid-container div.item iframe {
-    width: 200px;
-    height: auto;
+
+  main.videos-main .videos-container .item h2 {
+    font-size: 3em;
   }
-  
+
+  main.videos-main .videos-container .item p {
+    font-size: 2.2em;
+  }
+
+}
+
+.item {
+  background-color: #5c10a8d5;
+  padding: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+}
