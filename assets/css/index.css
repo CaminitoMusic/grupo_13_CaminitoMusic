@@ -7,13 +7,13 @@
   /*colores para la calesita -carrousel*/
   --negro: #393939;
   --fondo-01-carr:#400080;
-  --fondo-01-carr-grande:rgba(42, 20, 87, 0.877);
+  --fondo-01-carr-grande:rgba(27, 13, 56, 0.877);
     --blanco: #ececec;
     --borde-punto: rgba(72, 72, 75, 0.8);
-    --sombra-ppal: #413f3f;
+    --sombra-ppal: #2b2b2c;
     --sombra-sec: #0d345aaf;
     --borde-negro: #000000c9;
-    --punto-activo: rgba(134, 18, 129, 0.8);
+    --punto-activo: rgba(112, 41, 109, 0.8);
 }
 /****/
 
@@ -91,16 +91,34 @@ main.index-main div.carrousel .punto{
   transition: all 0.4s ease;
   border-radius: 1em;
   border: 1px solid var(--borde-punto);
-   background-color: var(--negro);
-   box-shadow: 0.5em 0.5em 0.5em var(--negro),  -0.2em -0.2em 0.5em var(--sombra-sec);
+  background-color: var(--negro);
+  box-shadow: 0.5em 0.5em 0.5em var(--negro),  -0.2em -0.2em 0.5em var(--sombra-sec);
 }
 
 main.index-main div.carrousel .punto.activo{
   background-color: var(--punto-activo);
-  border: 5px solid var(--negro);
-  box-shadow: 0.2em 0.2em 0.7em var(--sombra-sec), -0.6em -0.6em 1.2em var(--sombra-sec);
+  border: 7px solid var(--negro);
+  box-shadow: 0.2em 0.2em 0.7em var(--sombra-sec), -0.1em -0.1em 1em var(--sombra-sec);
   transition: all 0.4s ease;
 }
+
+
+main.index-main section {
+  /*box-shadow: 1px 1px 3px rgba(8, 11, 48, 0.863);*/
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec);
+  padding: 0.3em 0;
+}
+
+main.index-main section .audios {
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 0.3em 0;
+}
+main.index-main section .audios iframe{
+  text-align: center;
+  
+}
+/*****/
 
 body.body-banda, 
 body.body-videos,

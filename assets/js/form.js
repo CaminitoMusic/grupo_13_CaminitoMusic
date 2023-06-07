@@ -13,7 +13,7 @@ let headFormu = `
     <link rel="stylesheet" href="../assets/css/footer.css">
     <title>CaminitoMusic</title>`;
 
-document.getElementById('head-formu').innerHTML = headFormu;
+document.getElementById('head-contacto').innerHTML = headFormu;
 
 let headerMenu = `
 <span id="titulo-sitio">
@@ -27,7 +27,7 @@ let headerMenu = `
 <nav class="menu">
 <!--menu principal-->
 <ul id="menu-principal">
-    <li><a href="./index.html">Inicio</a></li>
+    <li><a href="./caminito.html">Inicio</a></li>
     <li><a href="/conciertos.html">Conciertos</a></li>
     <li><a href="./videos.html">Videos</a></li>
     <li><a href="./contacto.html">Contacto</a></li>
@@ -39,7 +39,6 @@ let headerMenu = `
         <span class="titulo-artistas">Artistas</span>
     </label>
     <ul id="menu-artistas">
-        <li><a href="">8 AM</a></li>
         <li><a href="./Radiohead.html">Radiohead</a></li>
         <li><a href="./Metallica.html">Metallica</a></li>
         <li><a href="./RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
