@@ -10,7 +10,6 @@ const headMenu = `
     <link rel="icon" href="../assets/icons/caminito.ico">
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <!-- <link rel="stylesheet" href="../assets/css/banda.css"> -->
     <link rel="stylesheet" href="../assets/css/videos.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <title>CaminitoMusic</title>`;
@@ -28,8 +27,7 @@ const headerMenu = `
     <nav class="menu">
         <!--menu principal-->
         <ul id="menu-principal">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="/conciertos.html">Conciertos</a></li>
+            <li><a href="./caminito.html">Inicio</a></li>
             <li><a href="./videos.html">Videos</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
         </ul>
@@ -40,7 +38,6 @@ const headerMenu = `
                 <span class="titulo-artistas">Artistas</span>
             </label>
             <ul id="menu-artistas">
-                <li><a href="#">8 AM</a></li>
                 <li><a href="./Radiohead.html">Radiohead</a></li>
                 <li><a href="./Metallica.html">Metallica</a></li>
                 <li><a href="./RedHotChiliPeppers.html">Red Hot Chili Peppers</a></li>
