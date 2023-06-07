@@ -18,3 +18,9 @@ https://anjunabeats.com/us refleja la identidad visual de la marca, es facil de 
 link a trello:
 
 https://trello.com/invite/b/5XsZSa4I/ATTI4845dcf33ccd43aeb3daf085fddf3d5f4D16B122/grupo13caminitomusic
+
+
+Link navegables (Servidores):
+https://main--visionary-praline-94f220.netlify.app/
+
+https://caminitomusic.github.io/grupo_13_CaminitoMusic/index
