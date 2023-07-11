@@ -2,12 +2,14 @@
 <html lang="es">
 
 <head id="head-contacto">
+  <!--
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario para contactarnos</title>
   <!-- Enlazar los estilos de Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/contacto.css">
+-->
 </head>
 
 <body id="body-form">
@@ -30,7 +32,7 @@
           <input type="email" class="form-control" id="email" name="email" required>
         </div>
         <div class="form-group">
-          <strong>Teléfono:</strong>
+          <strong><label for="apellido">Teléfono:</label></strong>
           <input type="tel" class="form-control" id="telefono" name="telefono" required>
         </div>
         <div class="form-group">
@@ -41,15 +43,17 @@
       </form>
     </div>
   </main>
-
+  
   <footer class="footer" id="footer-Formulario"></footer>
 
   <!-- Enlazar los scripts de Bootstrap y el script personalizado -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper-core.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="../assets/js/script.js"></script>
-  <script src="../assets/js/form.js"></script>
+
+  <script src="../assets/js/validacionForm.js"></script>
+  <script src="../assets/js/cabeceraForm.js"></script>
+  <script src="../assets/js/conexApiJson.js"></script>
   <script src="../assets/js/footer.js"></script>
 </body>
 

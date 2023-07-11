@@ -26,7 +26,7 @@ main.videos-main div.videos-container div.item p {
 .videos-container .item iframe {
   width: 100%;
   border-radius: 0.5em;
-  /*box-shadow: 0.5em 0.5em 0.5em var(--negro), -0.2em -0.2em 0.5em var(--sombra-sec);*/
+  box-shadow: 0.5em 0.5em 0.5em var(--negro), -0.2em -0.2em 0.5em var(--sombra-sec);
 }
 
 /***** MEDIAS QUERIES **************/

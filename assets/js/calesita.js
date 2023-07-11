@@ -6,7 +6,7 @@ punto.forEach((cadaPunto , i) => {
     punto[i].addEventListener('click',()=>{
 
         let posicion = i;
-        let operacion = posicion * -(100/6); /*width = 100% / 6 imagenes */
+        let operacion = posicion * -(100/5); /*width = 100% / X imagenes */
 
         grande.style.transform = `translateX(${ operacion }%)`;
 
