@@ -1,0 +1,201 @@
+[
+    {
+        "codigo": "1",
+        "nombre": "FleetWood Mac",
+        "discografia": [
+            "Fleetwood Mac (1975)",
+            "Rumours (1977)",
+            "Tusk (1979)",
+            "Mirage (1982)",
+            "Tango in the Night (1987)",
+            "Behind the Mask (1990)",
+            "Time (1995)",
+            "Say You Will (2003)",
+            "Extended Play (2013)",
+            "Fleetwood Mac Live (2019)"
+        ],
+        "integrantes": [
+            "Lindsey Buckingham (guitarra, voz)",
+            "Stevie Nicks (voz)",
+            "Christine McVie (teclados, voz)",
+            "John McVie (bajo)",
+            "Mick Fleetwood (batería)"
+        ],
+        "imagenes": [
+            {
+                "imgId": "img01",
+                "url": "https://los40.com/los40/imagenes/2022/12/16/los40classic/1671196553_394628_1671196777_gigante_normal.jpg",
+                "alt": "Fleetwood Mac 1"
+            },
+            {
+                "imgId": "img02",
+                "url": "https://www.futuro.cl/wp-content/uploads/2023/04/fleetwood-mac-1987-web-768x432.jpg",
+                "alt": "Fleetwood Mac 2"
+            },
+            {
+                "imgId": "img03",
+                "url": "https://fmrockandpop.com/media/k2/items/cache/002e8e491b09a55f1bac8b9f7f969c26_L.webp?t=20210218_193952",
+                "alt": "Fleetwood Mac 3"
+            }
+        ],
+        "historia": "Fleetwood Mac es una banda de rock formada en Londres, Inglaterra, en 1967. La banda ha sufrido varios cambios en su formación a lo largo de los años, siendo la alineación más exitosa la que incluyó a Lindsey Buckingham, Stevie Nicks, Christine McVie, John McVie y Mick Fleetwood. La banda ha vendido más de 120 millones de discos en todo el mundo."
+    },
+    {
+        "codigo": "2",
+        "nombre": "Metallica",
+        "discografia": [
+            "Em All (1983)",
+            "Ride the Lightning (1984)",
+            "Master of Puppets (1986)",
+            "...And Justice for All (1988)",
+            "Metallica (1991)",
+            "Load (1996)",
+            "Reload (1997)",
+            "St. Anger (2003)",
+            "Death Magnetic (2008)",
+            "Hardwired... to Self-Destruct (2016)"
+        ],
+        "integrantes": [
+            "James Hetfield (voz, guitarra)",
+            "Kirk Hammett (guitarra)",
+            "Robert Trujillo (bajo)",
+            "Lars Ulrich (batería)"
+        ],
+        "imagenes": [
+            {
+                "imgId": "img01",
+                "url": "https://www.cronista.com/files/image/392/392261/617963db3e49a.jpg",
+                "alt": "Metallica 1"
+            },
+            {
+                "imgId": "img02",
+                "url": "https://imagenes.elpais.com/resizer/f3fgLurILgvhVBEotVgcTQnvz_M=/1960x1103/cloudfront-eu-central-1.images.arcpublishing.com/prisa/5IVSQSEC6NEKZDAMTPSL6GL7XM.jpg",
+                "alt": "Metallica 2"
+            },
+            {
+                "imgId": "img03",
+                "url": "https://fmrockandpop.com/media/k2/items/cache/f169ff21c6ea91c9285b31125ca4b7ba_L.webp",
+                "alt": "Metallica 3"
+            }
+        ],
+        "historia": "Metallica es una banda de heavy metal formada en Los Ángeles, Estados Unidos, en 1981. La banda se compone de James Hetfield (voz, guitarra), Kirk Hammett (guitarra), Robert Trujillo (bajo) y Lars Ulrich (batería). Metallica es una de las bandas de heavy metal (trash)más exitosas y aclamadas de todos los tiempos"
+    },
+    {
+        "codigo": "3",
+        "nombre": "Radiohead",
+        "discografia": [
+            "Pablo Honey (1993)",
+            "The Bends (1995)",
+            "OK Computer (1997)",
+            "Kid A (2000)",
+            "Amnesiac (2001)",
+            "Hail to the Thief (2003)",
+            "In Rainbows (2007)",
+            "The King of Limbs (2011)",
+            "A Moon Shaped Pool (2016)"
+        ],
+        "integrantes": [
+            "Thom Yorke (voz, guitarra, piano)",
+            "Jonny Greenwood (guitarra, teclados)",
+            "Ed O'Brien (guitarra, coros)",
+            "Colin Greenwood (bajo)",
+            "Phil Selway (batería)"
+        ],
+        "imagenes": [
+            {
+                "imgId": "img01",
+                "url": "https://es.rollingstone.com/wp-content/uploads/2023/03/En-los-proximos-aos-haremos-algo-Phil-Selway-sobre-el-regreso-de-Radiohead.jpg",
+                "alt": "Radiohead 1"
+            },
+            {
+                "imgId": "img02",
+                "url": "https://marvel-b1-cdn.bc0a.com/f00000000293000/www.rockhall.com/sites/default/files/styles/c03g_desktop_1920_870/public/2019-11/landscape.png?h=d5e74559&itok=vDzFlSg6",
+                "alt": "Radiohead 2"
+            },
+            {
+                "imgId": "img03",
+                "url": "https://live-production.wcms.abc-cdn.net.au/301cd00c4d1d4c5843bf28094e0c1165?impolicy=wcms_crop_resize&cropH=900&cropW=1600&xPos=0&yPos=0&width=862&height=485",
+                "alt": "Radiohead 3"
+            }
+        ],
+        "historia": "Radiohead es una banda de rock alternativo formada en Oxford, Inglaterra, en 1985. La banda se compone de Thom Yorke (voz, guitarra, piano), Jonny Greenwood (guitarra, teclados), Ed O'Brien (guitarra, coros), Colin Greenwood (bajo) y Phil Selway (batería)."
+    },
+    {
+        "codigo": "4",
+        "nombre": "Red Hot Chili Peppers",
+        "discografia": [
+            "The Red Hot Chili Peppers (1984)",
+            "Freaky Styley (1985)",
+            "The Uplift Mofo Party Plan (1987)",
+            "Mother's Milk (1989)",
+            "Blood Sugar Sex Magik (1991)",
+            "One Hot Minute (1995)",
+            "Californication (1999)",
+            "By the Way (2002)",
+            "Stadium Arcadium (2006)",
+            "I'm with You (2011)",
+            "The Getaway (2016)"
+        ],
+        "integrantes": [
+            "Anthony Kiedis (voz)",
+            "<Flea (bajo)",
+            "Chad Smith (batería)",
+            "John Frusciante (guitarra)"
+        ],
+        "imagenes": [
+            {
+                "imgId": "img01",
+                "url": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CBDTFDX2RNHGBBTZMQLFITU25E.jpg",
+                "alt": "Red Hot Chili Peppers 1"
+            },
+            {
+                "imgId": "img02",
+                "url": "https://i.ytimg.com/vi/YlUKcNNmywk/maxresdefault.jpg",
+                "alt": "Red Hot Chili Peppers 2"
+            },
+            {
+                "imgId": "img03",
+                "url": "https://www.cronista.com/files/image/518/518773/641b39dc39f79.jpg",
+                "alt": "Red Hot Chili Peppers 3"
+            }
+        ],
+        "historia": "Red Hot Chili Peppers es una banda de funk rock formada en Los Ángeles, California, en 1983. La banda se compone de Anthony Kiedis (voz), Flea (bajo), Chad Smith (batería) y John Frusciante (guitarra)."
+    },
+    {
+        "codigo": "5",
+        "nombre": "The Strokes",
+        "discografia": [
+            "Is This It (2001)",
+            "Room on Fire (2003)",
+            "First Impressions of Earth (2006)",
+            "Angles (2011)",
+            "Comedown Machine (2013)",
+            "The New Abnormal (2020)"
+        ],
+        "integrantes": [
+            "Julian Casablancas (voz)",
+            "Nick Valensi (guitarra)",
+            "Albert Hammond Jr. (guitarra)",
+            "Nikolai Fraiture (bajo)",
+            "Fabrizio Moretti (batería)"
+        ],
+        "imagenes": [
+            {
+                "imgId": "img01",
+                "url": "https://imagenes.elpais.com/resizer/0pdhn03o3xmKDRUoE0kFz8VDpt8=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/FRFD6A6SASOOUFZD5QY4IJAN6U.jpg",
+                "alt": "The Strokes 1"
+            },
+            {
+                "imgId": "img02",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/The_Strokes_live_collage_2019%E2%80%932020.jpg",
+                "alt": "The Strokes 2"
+            },
+            {
+                "imgId": "img03",
+                "url": "https://cloudfront-us-east-1.images.arcpublishing.com/copesa/2VZDVXR22NFONP3MQPQQRZBQ4E.jpeg",
+                "alt": "The Strokes 3"
+            }
+        ],
+        "historia": "The Strokes es una banda de rock formada en Nueva York, Estados Unidos, en 1998. La banda se compone de Julian Casablancas (voz), Nick Valensi (guitarra), Albert Hammond Jr. (guitarra), Nikolai Fraiture (bajo) y Fabrizio Moretti (batería)."
+    }
+]
