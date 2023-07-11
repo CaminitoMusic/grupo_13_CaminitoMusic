@@ -23,7 +23,8 @@
 
 html {
   font-family: 'Ubuntu', sans-serif;
-  min-width: 420px; /* Tamaño de pantalla minima de visualizacion*/
+  min-width: 420px;
+  /* Tamaño de pantalla minima de visualizacion*/
 }
 
 /***** formato a la calesita ********/
@@ -201,6 +202,7 @@ main.caminito-main div.audios {
   /*box-shadow: 0.5em 0.5em 2em var(--blanco), -0.5em -0.5em 2em var(--sombra-sec);*/
   border-radius: 5%
 }
+
 main.caminito-main div.audios h2 {
   text-align: center;
 }
@@ -219,13 +221,14 @@ main.caminito-main div.audios iframe.iframe-grande {
 }
 
 /*** pagina de bandas ***/
-main.banda-main div.imagenes-bandas{
+main.banda-main div.imagenes-bandas {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.8em;
   padding: 1em;
 
 }
+
 main.banda-main div.imagenes-bandas img.imagenB {
   min-width: 370px;
   max-width: 30em;
@@ -238,6 +241,7 @@ main.banda-main div.imagenes-bandas img.imagenB {
   /*box-shadow: 0.5em 0.5em 2em var(--blanco), -0.5em -0.5em 2em var(--sombra-sec);*/
   border-radius: 5%
 }
+
 /******/
 
 .imagenes {
@@ -258,11 +262,15 @@ main.banda-main div.imagenes-bandas img.imagenB {
 /***                                                                  ***/
 /************************************************************************/
 
-@media (min-width:576px)/* and (max-width:768px)*/{
+@media (min-width:576px)
+
+/* and (max-width:768px)*/
+  {
+
   main.banda-main,
   main.videos-main,
   main.caminito-main {
-    margin-top: 6em;
+    margin-top: 3.5em;
   }
 }
 
@@ -271,7 +279,7 @@ main.banda-main div.imagenes-bandas img.imagenB {
   main.banda-main,
   main.videos-main,
   main.caminito-main {
-    margin-top: 7.5em;
+    margin-top: 5em;
   }
 
   main.caminito-main .caminito-container {
@@ -289,11 +297,17 @@ main.banda-main div.imagenes-bandas img.imagenB {
   main.caminito-main .caminito-container .audios p {
     font-size: 1.5em;
   }
-  main.banda-main div.imagenes-bandas{
+
+  main.banda-main div.imagenes-bandas {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: 0.5em;
     padding: 1.5em;
-  
+
+  }
+  main.banda-main div.imagenes-bandas img.imagenB {
+    width: 45%;
+    margin: 1.6em auto;
+    padding: 0.7em 1.3em;
   }
 
 }
@@ -315,13 +329,16 @@ main.banda-main div.imagenes-bandas img.imagenB {
   main.caminito-main .caminito-container .audios p {
     font-size: 2.2em;
   }
-  main.banda-main div.imagenes-bandas{
+
+  main.banda-main div.imagenes-bandas {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3em;
     padding: 1.7em;
-  
   }
 
+  main.banda-main div.imagenes-bandas img.imagenB {
+    width: 32%;
+    margin: 2em auto;
+    padding: 1em 1.5em;
+  }
 }
-
-
