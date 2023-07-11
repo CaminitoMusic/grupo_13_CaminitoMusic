@@ -44,11 +44,6 @@ function muestraOcultaMenu() {
   }
 };
 
-// Funcion para saber que link fue clickeado.
-/* function detectaBanda(evento) {
-  let bandaSel = document.getElementById
-} */
-
 //************  Funcion principal para la conexion a la similAPI-JSON. 
 // Obtiene la cantidad de bandas que haya en el JSON.
 const obtieneInfo = async () => {
@@ -64,9 +59,6 @@ const endpoint = `${urlAPI}`;
 
       // mostrar/Ocultar el menu artistas.
       muestraOcultaMenu();
-
-      // Detectar que artistas eligio el usuario.
-      //document.getElementsByClassName("linkArtista").addEventListener('click', detectaBanda);
     } 
 
   }
@@ -75,13 +67,6 @@ const endpoint = `${urlAPI}`;
   }
 
 }/*********/
-
-/*
-window.addEventListener('DOMContentLoaded', inicio);
-const inicio = () => {
-  btnArt.addEventListener('click', obtieneInfo);
-}*/
-
 
 window.onload =  () => {
   // ********* EJECUCION DEL SCRIPT ************/
